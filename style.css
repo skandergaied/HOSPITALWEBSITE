@@ -1543,19 +1543,26 @@ textarea {
     
       .googleMap {
         width: 100%; 
-        max-width: 600px; 
+        max-width: 100%; 
         height: 450px;
         border-bottom: 5px solid;
-        border-color: #061b38;
         margin: 0 auto;
         margin-bottom: 50px; 
     }
     
    
     .map-area {
-        width: 100%;
-        padding-bottom: 50px; 
-    }
+      width: 100%;
+      padding-bottom: 50px;
+      position: relative;
+  }
+  .googleMap iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
       @media only screen and (max-width: 767px) {
         .googleMap {
             height: 300px; 
