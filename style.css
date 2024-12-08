@@ -251,8 +251,12 @@ img {
       width: 50px;
       line-height: 46px; } }
 
+      
+
 .section-padding-100 {
-  padding: 100px 0; }
+  padding: 100px 0;
+  position: relative;
+ }
 
 .section-padding-50 {
   padding: 50px 0; }
@@ -472,9 +476,115 @@ img {
   height: 110px;
   position: relative;
   z-index: 1;
-  background-color: rgba(0, 108, 255, 0.5);
+  background-color: rgba(16, 33, 57, 0.5);
   -webkit-transition-duration: 500ms;
-  transition-duration: 500ms; }
+  transition-duration: 500ms;
+
+   }
+
+  /*
+   newww 
+
+  */
+  .new {
+    position: fixed;
+    width: 100%;  
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1a237e;
+  padding: 15px 100px;
+}
+
+.navbar-brand img {
+  max-height: 40px;
+}
+
+.navbar1 {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navbar1 li {
+  position: relative;
+}
+
+.navbar1 a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+}
+
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  min-width: 40%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  padding: 0.5rem 0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  color: #333 !important;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+}
+   /*
+   newww 
+
+  */
+  
+
+ 
+
+   .navbar-nav .nav-link {
+    padding: 10px 15px; 
+    color: #fff; 
+    transition: color 0.3s ease-in-out;
+}
+.breadcumb-area {
+  padding-top: 100px; /* Space below the navbar */
+  height: 350px; /* Adjust height if needed */
+}
+
+.breadcumb-title {
+  font-size: 50px; /* Slightly smaller font for better balance */
+  margin-bottom: 20px;
+  color: #59d2e2;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff; 
+}
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .main-header-area {
       height: 80px; } }
@@ -599,76 +709,7 @@ img {
   font-size: 22px;
   font-weight: 600; }
 
-.hero-area .owl-prev,
-.hero-area .owl-next {
-  width: 70px;
-  height: 70px;
-  position: absolute;
-  top: 50%;
-  line-height: 70px;
-  text-align: center;
-  color: #ffffff;
-  left: 70px;
-  margin-top: -35px;
-  opacity: 0;
-  -webkit-transition-duration: 500ms;
-  transition-duration: 500ms;
-  background-color: #081f3e;
-  font-size: 14px; }
-  .hero-area .owl-prev:hover,
-  .hero-area .owl-next:hover {
-    background-color: #006cff; }
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .hero-area .owl-prev,
-    .hero-area .owl-next {
-      left: 30px;
-      width: 50px;
-      height: 50px;
-      margin-top: -25px;
-      line-height: 50px; } }
-  @media only screen and (max-width: 767px) {
-    .hero-area .owl-prev,
-    .hero-area .owl-next {
-      left: 15px;
-      width: 40px;
-      height: 40px;
-      margin-top: -20px;
-      line-height: 40px; } }
-.hero-area .owl-next {
-  left: auto;
-  right: 70px; }
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .hero-area .owl-next {
-      right: 30px; } }
-  @media only screen and (max-width: 767px) {
-    .hero-area .owl-next {
-      right: 15px; } }
-.hero-area:hover .owl-prev, .hero-area:hover .owl-next {
-  opacity: 1; }
-.hero-area .owl-dots {
-  width: 1110px;
-  position: absolute;
-  bottom: 110px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%); }
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .hero-area .owl-dots {
-      width: 920px; } }
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .hero-area .owl-dots {
-      width: 680px; } }
-  @media only screen and (max-width: 767px) {
-    .hero-area .owl-dots {
-      width: 85%; } }
-.hero-area .owl-dot {
-  display: inline-block;
-  width: 36px;
-  height: 4px;
-  background-color: #cacaca;
-  margin-right: 8px; }
-  .hero-area .owl-dot.active {
-    background-color: #006cff; }
+
 
 /* :: 6.0 Book An Appoinment Area */
 .align-items-stretch {
@@ -847,7 +888,7 @@ textarea {
   .features-content {
     margin-bottom: 100px; } }
 .features-content h2 {
-  font-size: 48px;
+  font-size: 48px;  
   margin-bottom: 30px; }
   @media only screen and (max-width: 767px) {
     .features-content h2 {
@@ -997,15 +1038,27 @@ textarea {
     color: rgba(255, 255, 255, 0.35); }
 
 /* :: 13.0 Breadcumb Area CSS */
+.breadcumb-area-bg-img-gradient-background-overlay{
+  margin-top: 100px;
+
+}
+
 .breadcumb-area {
   width: 100%;
   height: 400px;
   position: relative;
   z-index: 1;
-  padding-top: 150px; }
-  .breadcumb-area .breadcumb-title {
-    font-size: 60px;
-    margin-bottom: 0; }
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.breadcumb-area .breadcumb-title {
+  font-size: 60px;
+  margin-bottom: 30px; /* Add px unit */
+  color: rgb(89, 210, 226); /* Adjust color to contrast the background image */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
+}
     @media only screen and (max-width: 767px) {
       .breadcumb-area .breadcumb-title {
         font-size: 30px; } }
@@ -1587,7 +1640,10 @@ textarea {
       
       
     
-   
+   .swiper{
+    width: 100%;
+    padding-top : 130px;
+   }
   
     swiper-container {
       width: 100%;
