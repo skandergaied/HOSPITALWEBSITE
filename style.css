@@ -705,10 +705,12 @@ textarea {
     right: 0 !important;
     border-radius: 0; }
 
-.medilife-book-an-appoinment-area {
-  position: relative;
-  z-index: 1;
-  margin-top: -65px; }
+    .medilife-book-an-appoinment-area {
+      position: relative;
+      z-index: 1;
+      margin-top: 0;
+      padding-top: 60px;
+  }
   .medilife-book-an-appoinment-area .appointment-form-content {
     background-color: #081f3e; }
   .medilife-book-an-appoinment-area .medilife-appointment-form {
