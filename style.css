@@ -487,6 +487,7 @@ img {
 
   */
   .new {
+    font-family: Arial, sans-serif;
     position: fixed;
     width: 100%;  
   top: 0;
@@ -495,7 +496,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #1a237e;
+    background-color: rgb(42, 168, 255); /* Matches the blue background in the image */
   padding: 15px 100px;
 }
 
@@ -557,6 +558,36 @@ img {
 
 .dropdown-item:hover {
   background-color: #f8f9fa;
+}
+
+/* Add this to your existing CSS */
+.appointment-btn {
+  background-color: #c5cae9 !important; /* Light blue background */
+  color: #1a237e !important; /* Dark blue text */
+  padding: 0.75rem 1.5rem !important;
+  border-radius: 50px !important;
+  font-weight: 600 !important;
+  margin-left: 1rem;
+  transition: all 0.3s ease !important;
+}
+
+.appointment-btn:hover {
+  background-color: #ffffff !important;
+  color: #1a237e !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Adjust the navbar1 gap to accommodate the button */
+.navbar1 {
+  gap: 1.5rem;
+}
+
+/* Ensure the button doesn't get the regular nav link styling */
+.navbar1 a.appointment-btn.active,
+.navbar1 a.appointment-btn:hover {
+  background-color: #ffffff !important;
+  color: #1a237e !important;
 }
    /*
    newww 
@@ -896,7 +927,9 @@ textarea {
 
 /* :: 11.0 Emergency Area CSS */
 .medilife-emergency-area {
-  background-color: #006cff; }
+  background-color: #006cff; 
+  height: 400;
+}
   .medilife-emergency-area .emergency-content i {
     font-size: 130px;
     color: #ffffff;

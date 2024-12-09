@@ -181,3 +181,34 @@
     }
     
 })(jQuery);
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.navbar1 a');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Remove active class from all links
+            navLinks.forEach(l => l.classList.remove('active'));
+            
+            // Add active class to clicked link
+            this.classList.add('active');
+            
+            // If it's not a dropdown toggle, store the active state
+            if (!this.classList.contains('dropdown-toggle')) {
+                localStorage.setItem('activeNav', this.getAttribute('href'));
+            }
+        });
+    });
+    
+    // Check for active page on load
+    const currentPage = window.location.pathname;
+    const storedActive = localStorage.getItem('activeNav');
+    
+    if (storedActive) {
+        const activeLink = document.querySelector(`a[href="${storedActive}"]`);
+        if (activeLink) {
+            activeLink.classList.add('active');
+        }
+    }
+});
