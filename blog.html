@@ -81,13 +81,13 @@
                     <div class="row">
                         <!-- Single Blog Area -->
                         <div class="col-12 col-md-6">
-                            <div class="single-blog-area bg-gray mb-50">
+                            <div class="single-blog-area bg-gray mb-50" onclick="openAlertPopup()">
                                 <!-- Post Thumbnail -->
                                 <div class="blog-post-thumbnail">
                                     <img src="img/blog-img/1.jpg" alt="">
                                     <!-- Post Date -->
                                     <div class="post-date">
-                                        <a href="#">Jan 23, 2018</a>
+                                        <a href="#">Dec 15, 2024</a>
                                     </div>
                                 </div>
                                 <!-- Post Content -->
@@ -95,21 +95,100 @@
                                     <div class="post-author">
                                         <a href="#"><img src="img/blog-img/p1.jpg" alt=""></a>
                                     </div>
-                                    <a href="#" class="headline">New drog release soon</a>
-                                    <p>Dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-                                    <a href="#" class="comments">3 Comments</a>
+                                    <a href="#" class="headline" id="postTitle">New drug release soon</a>
+                                    <p>A drug is a substance that has a physiological effect when ingested or otherwise introduced into the body.</p>
                                 </div>
                             </div>
                         </div>
-                        <!-- Single Blog Area -->
+                        
+                        <!-- Popup Structure -->
+                        <div id="alertPopup" class="popup">
+                            <div class="popup-content">
+                                <span class="close" onclick="closeAlertPopup()" style="font-size: 18px; font-weight: bold; cursor: pointer; position: absolute; top: 10px; right: 15px;">X</span>
+                                <h3>New Drug Release Soon</h3>
+                                <img src="img/blog-img/1.jpg" alt="Drug Image" style="width: 100%; margin-bottom: 15px;">
+                                <p><strong>What is a drug?</strong></p>
+                                <p>A drug is a substance that has a physiological effect when ingested or otherwise introduced into the body. Drugs can be used for medical purposes, such as treating or preventing diseases, or for recreational purposes, although they can also have harmful effects when misused.</p>
+                                <h4>Comments</h4>
+                                <textarea id="commentBox" rows="4" style="width: 100%; margin-bottom: 10px;" placeholder="Write your comment here..."></textarea>
+                                <button onclick="addCommentToList()">Submit</button>
+                                <ul id="commentList" style="margin-top: 10px; padding-left: 20px; max-height: 150px; overflow-y: auto;"></ul>
+                            </div>
+                        </div>
+                        
+                        <!-- CSS for Popup -->
+                        <style>
+                            .popup {
+                                display: none;
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-color: rgba(0, 0, 0, 0.5);
+                                justify-content: center;
+                                align-items: center;
+                                z-index: 1000;
+                            }
+                        
+                            .popup-content {
+                                background-color: white;
+                                padding: 20px;
+                                border-radius: 10px;
+                                width: 90%;
+                                max-width: 600px;
+                                text-align: center;
+                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                                max-height: 80%;
+                                overflow-y: auto;
+                                position: relative;
+                            }
+                        
+                            .close {
+                                font-size: 18px;
+                                font-weight: bold;
+                                cursor: pointer;
+                                position: absolute;
+                                top: 10px;
+                                right: 15px;
+                            }
+                        </style>
+                        
+                        <!-- JavaScript for Popup -->
+                        <script>
+                            function openAlertPopup() {
+                                document.getElementById("alertPopup").style.display = "flex";
+                            }
+                        
+                            function closeAlertPopup() {
+                                document.getElementById("alertPopup").style.display = "none";
+                            }
+                        
+                            function addCommentToList() {
+                                const commentBox = document.getElementById("commentBox");
+                                const commentList = document.getElementById("commentList");
+                                const commentText = commentBox.value.trim();
+                        
+                                if (commentText) {
+                                    const listItem = document.createElement("li");
+                                    listItem.textContent = commentText;
+                                    commentList.appendChild(listItem);
+                                    commentBox.value = ""; // Clear the textarea
+                                } else {
+                                    alert("Please write a comment before submitting.");
+                                }
+                            }
+                        </script>
+
+                        <!-- 2 Single Blog Area -->
                         <div class="col-12 col-md-6">
-                            <div class="single-blog-area bg-gray mb-50">
+                            <div class="single-blog-area bg-gray mb-50" onclick="openAlertPopup()">
                                 <!-- Post Thumbnail -->
                                 <div class="blog-post-thumbnail">
                                     <img src="img/blog-img/2.jpg" alt="">
                                     <!-- Post Date -->
                                     <div class="post-date">
-                                        <a href="#">Jan 23, 2018</a>
+                                        <a href="#">Dec 15, 2024</a>
                                     </div>
                                 </div>
                                 <!-- Post Content -->
@@ -117,21 +196,103 @@
                                     <div class="post-author">
                                         <a href="#"><img src="img/blog-img/p2.jpg" alt=""></a>
                                     </div>
-                                    <a href="#" class="headline">Free dental care</a>
+                                    <a href="#" class="headline" id="postTitle">Free dental care</a>
                                     <p>Dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-                                    <a href="#" class="comments">3 Comments</a>
                                 </div>
                             </div>
                         </div>
-                        <!-- Single Blog Area -->
+                        
+                        
+                        <!-- Popup Structure -->
+                        <div id="alertPopup" class="popup">
+                            <div class="popup-content">
+                                <span class="close" onclick="closeAlertPopup()" style="font-size: 18px; font-weight: bold; cursor: pointer; position: absolute; top: 10px; right: 15px;">X</span>
+                                <h3>Free Dental Care</h3>
+                                <img src="img/blog-img/2.jpg" alt="Dental Image" style="width: 100%; margin-bottom: 15px;">
+                                <p><strong>What is this about?</strong></p>
+                                <p>Dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt. Providing free dental care for those in need.</p>
+                                <h4>Comments</h4>
+                                <textarea id="commentBox" rows="4" style="width: 100%; margin-bottom: 10px;" placeholder="Write your comment here..."></textarea>
+                                <button onclick="addCommentToList()">Submit</button>
+                                <ul id="commentList" style="margin-top: 10px; padding-left: 20px; max-height: 150px; overflow-y: auto;"></ul>
+                                <button class="close" onclick="closeAlertPopup()"></button>
+                            </div>
+                        </div>
+                        
+                        
+                        <!-- CSS for Popup -->
+                        <style>
+                            .popup {
+                                display: none;
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-color: rgba(0, 0, 0, 0.5);
+                                justify-content: center;
+                                align-items: center;
+                                z-index: 1000;
+                            }
+                        
+                            .popup-content {
+                                background-color: white;
+                                padding: 20px;
+                                border-radius: 10px;
+                                width: 90%;
+                                max-width: 600px;
+                                text-align: center;
+                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                                max-height: 80%;
+                                overflow-y: auto;
+                                position: relative;
+                            }
+                        
+                            .close {
+                                font-size: 18px;
+                                font-weight: bold;
+                                cursor: pointer;
+                                position: absolute;
+                                top: 10px;
+                                right: 15px;
+                            }
+                        </style>
+                        
+                        <!-- JavaScript for Popup -->
+                        <script>
+                            function openAlertPopup() {
+                                document.getElementById("alertPopup").style.display = "flex";
+                            }
+                        
+                            function closeAlertPopup() {
+                                document.getElementById("alertPopup").style.display = "none";
+                            }
+                        
+                            function addCommentToList() {
+                                const commentBox = document.getElementById("commentBox");
+                                const commentList = document.getElementById("commentList");
+                                const commentText = commentBox.value.trim();
+                        
+                                if (commentText) {
+                                    const listItem = document.createElement("li");
+                                    listItem.textContent = commentText;
+                                    commentList.appendChild(listItem);
+                                    commentBox.value = ""; // Clear the textarea
+                                } else {
+                                    alert("Please write a comment before submitting.");
+                                }
+                            }
+                        </script>
+
+                        <!-- 3  Single Blog Area -->
                         <div class="col-12 col-md-6">
-                            <div class="single-blog-area bg-gray mb-50">
+                            <div class="single-blog-area bg-gray mb-50" onclick="openAlertPopup()">
                                 <!-- Post Thumbnail -->
                                 <div class="blog-post-thumbnail">
-                                    <img src="img/blog-img/3.jpg" alt="">
+                                    <img src="img/blog-img/coffee.jpg" alt="">
                                     <!-- Post Date -->
                                     <div class="post-date">
-                                        <a href="#">Jan 23, 2018</a>
+                                        <a href="#">Dec 15, 2024</a>
                                     </div>
                                 </div>
                                 <!-- Post Content -->
@@ -139,21 +300,103 @@
                                     <div class="post-author">
                                         <a href="#"><img src="img/blog-img/p3.jpg" alt=""></a>
                                     </div>
-                                    <a href="#" class="headline">Good news for the pacients</a>
-                                    <p>Dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-                                    <a href="#" class="comments">3 Comments</a>
+                                    <a href="#" class="headline" id="postTitle">Is coffee good for your heart health? 3 studies offer insights</a>
+                                    <p>How does caffeine affect heart health? The latest research offers new insights. </p>
                                 </div>
                             </div>
                         </div>
-                        <!-- Single Blog Area -->
+                        
+                        <!-- Popup Structure -->
+                        <div id="alertPopup" class="popup">
+                            <div class="popup-content">
+                                <span class="close" onclick="closeAlertPopup()" style="font-size: 18px; font-weight: bold; cursor: pointer; position: absolute; top: 10px; right: 15px;">X</span>
+                                <h3>Good news for the patients</h3>
+                                <img src="img/blog-img/coffee.jpg" alt="Blog Image" style="width: 100%; margin-bottom: 15px;">
+                                <p><strong>What is this about?</strong></p>
+                                <p>Studies on caffeine’s effects on heart health have gained interest in recent years. One crucial question remains: How much caffeine is too much?
+                                    In this roundup of the latest studies exploring the effects of caffeine on cardiovascular health, Medical News Today compiles the most recent evidence to highlight key findings and takeaways.
+                                    Some studies suggest that consuming caffeine may help boost vascular health and lower the risk of type 2 diabetes, while others indicate that consuming too much may increase the risk of stroke</p>
+                                <h4>Comments</h4>
+                                <textarea id="commentBox" rows="4" style="width: 100%; margin-bottom: 10px;" placeholder="Write your comment here..."></textarea>
+                                <button onclick="addCommentToList()">Submit</button>
+                                <ul id="commentList" style="margin-top: 10px; padding-left: 20px; max-height: 150px; overflow-y: auto;"></ul>
+                                <button class="close" onclick="closeAlertPopup()"></button>
+                            </div>
+                        </div>
+                        
+                        <!-- CSS for Popup -->
+                        <style>
+                            .popup {
+                                display: none;
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-color: rgba(0, 0, 0, 0.5);
+                                justify-content: center;
+                                align-items: center;
+                                z-index: 1000;
+                            }
+                        
+                            .popup-content {
+                                background-color: white;
+                                padding: 20px;
+                                border-radius: 10px;
+                                width: 90%;
+                                max-width: 600px;
+                                text-align: center;
+                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                                max-height: 80%;
+                                overflow-y: auto;
+                                position: relative;
+                            }
+                        
+                            .close {
+                                font-size: 18px;
+                                font-weight: bold;
+                                cursor: pointer;
+                                position: absolute;
+                                top: 10px;
+                                right: 15px;
+                            }
+                        </style>
+                        
+                        <!-- JavaScript for Popup -->
+                        <script>
+                            function openAlertPopup() {
+                                document.getElementById("alertPopup").style.display = "flex";
+                            }
+                        
+                            function closeAlertPopup() {
+                                document.getElementById("alertPopup").style.display = "none";
+                            }
+                        
+                            function addCommentToList() {
+                                const commentBox = document.getElementById("commentBox");
+                                const commentList = document.getElementById("commentList");
+                                const commentText = commentBox.value.trim();
+                        
+                                if (commentText) {
+                                    const listItem = document.createElement("li");
+                                    listItem.textContent = commentText;
+                                    commentList.appendChild(listItem);
+                                    commentBox.value = ""; // Clear the textarea
+                                } else {
+                                    alert("Please write a comment before submitting.");
+                                }
+                            }
+                        </script>
+
+                        <!-- 4 Single Blog Area -->
                         <div class="col-12 col-md-6">
-                            <div class="single-blog-area bg-gray mb-50">
+                            <div class="single-blog-area bg-gray mb-50" onclick="openAlertPopup()">
                                 <!-- Post Thumbnail -->
                                 <div class="blog-post-thumbnail">
-                                    <img src="img/blog-img/1.jpg" alt="">
+                                    <img src="img/blog-img/plants.jpg" alt="">
                                     <!-- Post Date -->
                                     <div class="post-date">
-                                        <a href="#">Jan 23, 2018</a>
+                                        <a href="#">Dec 15, 2024</a>
                                     </div>
                                 </div>
                                 <!-- Post Content -->
@@ -161,21 +404,103 @@
                                     <div class="post-author">
                                         <a href="#"><img src="img/blog-img/p1.jpg" alt=""></a>
                                     </div>
-                                    <a href="#" class="headline">New drog release soon</a>
-                                    <p>Dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-                                    <a href="#" class="comments">3 Comments</a>
+                                    <a href="#" class="headline" id="postTitle">Diet rich in whole plant foods and fish may keep colon cancer at bay</a>
+                                    <p>Our dietary choices may impact our risk of gastrointestinal cancers, including colorectal cancer.</p>
                                 </div>
                             </div>
                         </div>
-                        <!-- Single Blog Area -->
+                        
+                        <!-- Popup Structure -->
+                        <div id="alertPopup" class="popup">
+                            <div class="popup-content">
+                                <span class="close" onclick="closeAlertPopup()" style="font-size: 18px; font-weight: bold; cursor: pointer; position: absolute; top: 10px; right: 15px;">X</span>
+                                <h3>New drug release soon</h3>
+                                <img src="img/blog-img/plants.jpg" alt="Blog Image" style="width: 100%; margin-bottom: 15px;">
+                                <p><strong>What is this about?</strong></p>
+                                <p>With bowel cancer diagnoses rising among people under 50, researchers are urging the public to increase fibre intake and adopt healthier eating habits to reduce the risk of gastrointestinal cancers.
+                                    Studies from Flinders University reveal that diets rich in fruits, vegetables, whole grains and healthy fats, while limiting sugar and alcohol, may significantly lower cancer risk and improve outcomes.
+                                    However, researchers point out that further clinical trials are needed to better understand how dietary patterns influence cancer development and to expand education on nutrition as a preventive measure..</p>
+                                <h4>Comments</h4>
+                                <textarea id="commentBox" rows="4" style="width: 100%; margin-bottom: 10px;" placeholder="Write your comment here..."></textarea>
+                                <button onclick="addCommentToList()">Submit</button>
+                                <ul id="commentList" style="margin-top: 10px; padding-left: 20px; max-height: 150px; overflow-y: auto;"></ul>
+                                <button class="close" onclick="closeAlertPopup()"></button>
+                            </div>
+                        </div>
+                        
+                        <!-- CSS for Popup -->
+                        <style>
+                            .popup {
+                                display: none;
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-color: rgba(0, 0, 0, 0.5);
+                                justify-content: center;
+                                align-items: center;
+                                z-index: 1000;
+                            }
+                        
+                            .popup-content {
+                                background-color: white;
+                                padding: 20px;
+                                border-radius: 10px;
+                                width: 90%;
+                                max-width: 600px;
+                                text-align: center;
+                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                                max-height: 80%;
+                                overflow-y: auto;
+                                position: relative;
+                            }
+                        
+                            .close {
+                                font-size: 18px;
+                                font-weight: bold;
+                                cursor: pointer;
+                                position: absolute;
+                                top: 10px;
+                                right: 15px;
+                            }
+                        </style>
+                        
+                        <!-- JavaScript for Popup -->
+                        <script>
+                            function openAlertPopup() {
+                                document.getElementById("alertPopup").style.display = "flex";
+                            }
+                        
+                            function closeAlertPopup() {
+                                document.getElementById("alertPopup").style.display = "none";
+                            }
+                        
+                            function addCommentToList() {
+                                const commentBox = document.getElementById("commentBox");
+                                const commentList = document.getElementById("commentList");
+                                const commentText = commentBox.value.trim();
+                        
+                                if (commentText) {
+                                    const listItem = document.createElement("li");
+                                    listItem.textContent = commentText;
+                                    commentList.appendChild(listItem);
+                                    commentBox.value = ""; // Clear the textarea
+                                } else {
+                                    alert("Please write a comment before submitting.");
+                                }
+                            }
+                        </script>
+
+                        <!-- 5 Single Blog Area -->
                         <div class="col-12 col-md-6">
-                            <div class="single-blog-area bg-gray mb-50">
+                            <div class="single-blog-area bg-gray mb-50" onclick="openAlertPopup()">
                                 <!-- Post Thumbnail -->
                                 <div class="blog-post-thumbnail">
-                                    <img src="img/blog-img/2.jpg" alt="">
+                                    <img src="img/blog-img/protein.jpg" alt="">
                                     <!-- Post Date -->
                                     <div class="post-date">
-                                        <a href="#">Jan 23, 2018</a>
+                                        <a href="#">Dec 15, 2024</a>
                                     </div>
                                 </div>
                                 <!-- Post Content -->
@@ -183,21 +508,103 @@
                                     <div class="post-author">
                                         <a href="#"><img src="img/blog-img/p2.jpg" alt=""></a>
                                     </div>
-                                    <a href="#" class="headline">Free dental care</a>
-                                    <p>Dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-                                    <a href="#" class="comments">3 Comments</a>
+                                    <a href="#" class="headline" id="postTitle">Eating more plant protein may lower the risk of heart disease as much as 27%</a>
+                                    <p>A new study links consuming more plant-based protein to a lower risk of heart disease.</p>
                                 </div>
                             </div>
                         </div>
-                        <!-- Single Blog Area -->
+                        
+                        <!-- Popup Structure -->
+                        <div id="alertPopup" class="popup">
+                            <div class="popup-content">
+                                <span class="close" onclick="closeAlertPopup()" style="font-size: 18px; font-weight: bold; cursor: pointer; position: absolute; top: 10px; right: 15px;">X</span>
+                                <h3>Free dental care</h3>
+                                <img src="img/blog-img/protein.jpg" alt="Blog Image" style="width: 100%; margin-bottom: 15px;">
+                                <p><strong>What is this about?</strong></p>
+                                <p>A recent study examined the potential effects that consuming different forms of protein may have on heart health.
+                                    The researchers were interested in the ratio of plant vs. animal-based protein people consumed and their long-term health outcomes.
+                                    The researchers learned that consuming a higher ratio of plant to animal protein could lead to a reduction of both coronary heart disease (CHD) and cardiovascular disease (CVD).</p>
+                                <h4>Comments</h4>
+                                <textarea id="commentBox" rows="4" style="width: 100%; margin-bottom: 10px;" placeholder="Write your comment here..."></textarea>
+                                <button onclick="addCommentToList()">Submit</button>
+                                <ul id="commentList" style="margin-top: 10px; padding-left: 20px; max-height: 150px; overflow-y: auto;"></ul>
+                                <button class="close" onclick="closeAlertPopup()"></button>
+                            </div>
+                        </div>
+                        
+                        <!-- CSS for Popup -->
+                        <style>
+                            .popup {
+                                display: none;
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-color: rgba(0, 0, 0, 0.5);
+                                justify-content: center;
+                                align-items: center;
+                                z-index: 1000;
+                            }
+                        
+                            .popup-content {
+                                background-color: white;
+                                padding: 20px;
+                                border-radius: 10px;
+                                width: 90%;
+                                max-width: 600px;
+                                text-align: center;
+                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                                max-height: 80%;
+                                overflow-y: auto;
+                                position: relative;
+                            }
+                        
+                            .close {
+                                font-size: 18px;
+                                font-weight: bold;
+                                cursor: pointer;
+                                position: absolute;
+                                top: 10px;
+                                right: 15px;
+                            }
+                        </style>
+                        
+                        <!-- JavaScript for Popup -->
+                        <script>
+                            function openAlertPopup() {
+                                document.getElementById("alertPopup").style.display = "flex";
+                            }
+                        
+                            function closeAlertPopup() {
+                                document.getElementById("alertPopup").style.display = "none";
+                            }
+                        
+                            function addCommentToList() {
+                                const commentBox = document.getElementById("commentBox");
+                                const commentList = document.getElementById("commentList");
+                                const commentText = commentBox.value.trim();
+                        
+                                if (commentText) {
+                                    const listItem = document.createElement("li");
+                                    listItem.textContent = commentText;
+                                    commentList.appendChild(listItem);
+                                    commentBox.value = ""; // Clear the textarea
+                                } else {
+                                    alert("Please write a comment before submitting.");
+                                }
+                            }
+                        </script>
+
+                        <!-- 6 Single Blog Area -->
                         <div class="col-12 col-md-6">
-                            <div class="single-blog-area bg-gray mb-50">
+                            <div class="single-blog-area bg-gray mb-50" onclick="openAlertPopup()">
                                 <!-- Post Thumbnail -->
                                 <div class="blog-post-thumbnail">
-                                    <img src="img/blog-img/3.jpg" alt="">
+                                    <img src="img/blog-img/walk.jpg" alt="">
                                     <!-- Post Date -->
                                     <div class="post-date">
-                                        <a href="#">Jan 23, 2018</a>
+                                        <a href="#">Dec 15, 2024</a>
                                     </div>
                                 </div>
                                 <!-- Post Content -->
@@ -205,12 +612,93 @@
                                     <div class="post-author">
                                         <a href="#"><img src="img/blog-img/p3.jpg" alt=""></a>
                                     </div>
-                                    <a href="#" class="headline">Good news for the pacients</a>
-                                    <p>Dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-                                    <a href="#" class="comments">3 Comments</a>
+                                    <a href="#" class="headline" id="postTitle">Daily walk may prolong lifespan</a>
+                                    <p>Taking a walk every day could add years to your life, a new study suggests.</p>
                                 </div>
                             </div>
                         </div>
+                        
+                        <!-- Popup Structure -->
+                        <div id="alertPopup" class="popup">
+                            <div class="popup-content">
+                                <span class="close" onclick="closeAlertPopup()" style="font-size: 18px; font-weight: bold; cursor: pointer; position: absolute; top: 10px; right: 15px;">X</span>
+                                <h3>Good news for the patients</h3>
+                                <img src="img/blog-img/walk.jpg" alt="Blog Image" style="width: 100%; margin-bottom: 15px;">
+                                <p><strong>What is this about?</strong></p>
+                                <p>If Americans over 40 walked as much each day as the most physically active members of the population, they could extend their life span by at least five years, a new study finds.
+                                    The least physically active 25% of the population stood the most to gain, according to the predictive model: For each hour of walking they do, they can extend their life by about 6 hours.
+                                    While the study may have limitations since it was based on existing data from certain portions of the American population, the findings do line up with known health benefits of physical activity, experts say.</p>
+                                <h4>Comments</h4>
+                                <textarea id="commentBox" rows="4" style="width: 100%; margin-bottom: 10px;" placeholder="Write your comment here..."></textarea>
+                                <button onclick="addCommentToList()">Submit</button>
+                                <ul id="commentList" style="margin-top: 10px; padding-left: 20px; max-height: 150px; overflow-y: auto;"></ul>
+                                <button class="close" onclick="closeAlertPopup()"></button>
+                            </div>
+                        </div>
+                        
+                        <!-- CSS for Popup -->
+                        <style>
+                            .popup {
+                                display: none;
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-color: rgba(0, 0, 0, 0.5);
+                                justify-content: center;
+                                align-items: center;
+                                z-index: 1000;
+                            }
+                        
+                            .popup-content {
+                                background-color: white;
+                                padding: 20px;
+                                border-radius: 10px;
+                                width: 90%;
+                                max-width: 600px;
+                                text-align: center;
+                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                                max-height: 80%;
+                                overflow-y: auto;
+                                position: relative;
+                            }
+                        
+                            .close {
+                                font-size: 18px;
+                                font-weight: bold;
+                                cursor: pointer;
+                                position: absolute;
+                                top: 10px;
+                                right: 15px;
+                            }
+                        </style>
+                        
+                        <!-- JavaScript for Popup -->
+                        <script>
+                            function openAlertPopup() {
+                                document.getElementById("alertPopup").style.display = "flex";
+                            }
+                        
+                            function closeAlertPopup() {
+                                document.getElementById("alertPopup").style.display = "none";
+                            }
+                        
+                            function addCommentToList() {
+                                const commentBox = document.getElementById("commentBox");
+                                const commentList = document.getElementById("commentList");
+                                const commentText = commentBox.value.trim();
+                        
+                                if (commentText) {
+                                    const listItem = document.createElement("li");
+                                    listItem.textContent = commentText;
+                                    commentList.appendChild(listItem);
+                                    commentBox.value = ""; // Clear the textarea
+                                } else {
+                                    alert("Please write a comment before submitting.");
+                                }
+                            }
+                        </script>
                     </div>
                 </div>
 
@@ -276,9 +764,9 @@
 
                         <!-- medilife Emergency Card -->
                         <div class="medilife-emergency-card bg-img bg-overlay" style="background-image: url(img/bg-img/about1.jpg);">
-                            <i class="icon-smartphone"></i>
-                            <h2>For Emergency calls</h2>
-                            <h3>+12-823-611-8721</h3>
+                            <a href=tel:53345795332453> <i class="icon-smartphone"> </i> </a>
+                            <a href="tel:53345795332453"> <h2>For Emergency calls</h2></a>
+                            <a href="tel:53345795332453"> <h6> +53345795332453 </h3></a> 
                         </div>
 
                     </div>
@@ -308,10 +796,10 @@
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer.</p>
                             <div class="footer-social-info">
-                                <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                <a href="https://www.google.com/"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                <a href="https://www.pinterest.com/"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                                <a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="https://www.x.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>
@@ -399,10 +887,10 @@
                             <!-- Copywrite Text -->
                             <div class="copywrite-text">
                                 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://google.com" target="_blank">GropZ</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 </p>
-<p>Re-distributed by <a href="https://themewagon.com/" target="_blank">Themewagon</a>
+<p>Re-distributed by <a href="https://google.com/" target="_blank">GroupZ</a>
 </p>
                             </div>
                         </div>
