@@ -1844,3 +1844,161 @@ textarea {
       color: #ffffff; }
 
 /*# sourceMappingURL=style.css.map */
+#customAlert {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border: 1px solid #fff;
+  padding: 40px; /* Increased padding to make the box larger */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 1000;
+  width: 300px; /* Optional: You can set a fixed width to ensure consistency */
+}
+
+#customAlert p {
+  font-size: 20px; /* Increased font size for the success message */
+  margin-bottom: 20px; /* Space below the text */
+}
+
+#customAlert button {
+  background-color: #007bff;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 15px 30px; /* Increased padding for the button */
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#customAlert button:hover {
+  background-color: #0056b3;
+}
+
+/* Normal link color */
+.medilife-contact-card .contact-meta a {
+  color: #007bff; /* Default color */
+  text-decoration: none;
+}
+
+/* Style for the active (clicked) and focused link */
+.medilife-contact-card .contact-meta a.clicked {
+  color: #ee5eeb; /* Change to your desired color */
+  text-decoration: underline; /* Optional: adds an underline */
+}
+
+
+/* Alert box styling */
+#alertBox {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+#alertBox img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+#alertBox button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#alertBox button:hover {
+  background-color: #0056b3;
+}
+
+/* Alert box styling */
+#alertBox {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  text-align: center;
+  max-width: 600px;
+  width: 90%;
+}
+
+#alertBox img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+#alertBox button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#alertBox button:hover {
+  background-color: #0056b3;
+}
+/* Comment box styling */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 30px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .catagories-menu li {
+      display: block;
+  }
+}
