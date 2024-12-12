@@ -125,6 +125,7 @@
                         <div class="service-content">
                             <h5>The Best Doctors</h5>
                             <p>Lorem ipsum dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+                            <a href="services.html" class="btn btn-link">View for Info</a>
                         </div>
                     </div>
                 </div>
@@ -137,6 +138,7 @@
                         <div class="service-content">
                             <h5>Baby Nursery</h5>
                             <p>Dolor sit amet, consecte tuer elit, sed diam nonummy nibh euismod tincidunt ut ldolore magna.</p>
+                            <a href="services.html" class="btn btn-link">View for Info</a>
                         </div>
                     </div>
                 </div>
@@ -149,6 +151,7 @@
                         <div class="service-content">
                             <h5>Helicopters</h5>
                             <p>Lorem ipsum dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+                            <a href="services.html" class="btn btn-link">View for Info</a>
                         </div>
                     </div>
                 </div>
@@ -161,6 +164,7 @@
                         <div class="service-content">
                             <h5>Laboratory</h5>
                             <p>Dolor sit amet, consecte tuer elit, sed diam nonummy nibh euismod tincidunt ut ldolore magna.</p>
+                            <a href="services.html" class="btn btn-link">View for Info</a>
                         </div>
                     </div>
                 </div>
@@ -173,6 +177,7 @@
                         <div class="service-content">
                             <h5>Emergency Room</h5>
                             <p>Dolor sit amet, consecte tuer elit, sed diam nonummy nibh euismod tincidunt ut ldolore magna.</p>
+                            <a href="services.html" class="btn btn-link">View for Info</a>
                         </div>
                     </div>
                 </div>
@@ -185,13 +190,46 @@
                         <div class="service-content">
                             <h5>Cardiology</h5>
                             <p>Dolor sit amet, consecte tuer elit, sed diam nonummy nibh euismod tincidunt ut ldolore magna.</p>
+                            <a href="services.html" class="btn btn-link">View for Info</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- ***** Services Area End ***** -->
+
+    <section class="feedback-section section-padding-70">
+        <div class="container">
+            <h2 class="text-center">Share Your Thoughts About Our Services</h2>
+            <form method="post" class="mt-4">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" name="name" id="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" name="email" id="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="feedback">Your Feedback</label>
+                    <textarea name="feedback" id="feedback" class="form-control" rows="5" required></textarea>
+                </div>
+                <div class="text-center section-padding-100">
+                    <button type="button" class="btn btn-primary" onclick="showAlert()">Submit Feedback</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    <script>
+        function showAlert() {
+            alert("Thank you for your feedback!");
+        }
+    </script>
+    
+    
+
+   
 
     <div class="medilife-services-area clearfix">
         <!-- Single Services Area -->
@@ -294,7 +332,9 @@
                     <div class="cta-content">
                         <i class="icon-smartphone"></i>
                         <h2>For Emergency calls</h2>
-                        <h3>+12-823-611-8721</h3>
+                        <a href="tel:+128236118721"><h3>+12-823-611-8721</h3></a>
+                      
+
                     </div>
                 </div>
             </div>
