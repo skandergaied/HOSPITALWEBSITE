@@ -16,6 +16,7 @@
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 
@@ -26,36 +27,74 @@
     </div>
 
     <!-- ***** Header Area Start ***** -->
-    <head>
-        <div class="new">
-            <a class="navbar-brand" href="index.html">
-                <img src="img/core-img/logo.png" alt="Logo">
-            </a>
-            <ul class="navbar1">
-                <li><a href="index.html">HOME</a></li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" href="#" role="button">
-                        Pages
-                    </a> 
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="index.html">Home</a>
-                        <a class="dropdown-item" href="about-us.html">About Us</a>
-                        <a class="dropdown-item" href="services.html">Services</a>
-                        <a class="dropdown-item" href="blog.html">News</a>
-                        <a class="dropdown-item" href="single-blog.html">News Details</a>
-                        <a class="dropdown-item" href="contact.html">Contact</a>
-                        <a class="dropdown-item" href="elements.html">Elements</a>
-                        <a class="dropdown-item" href="index-icons.html">All Icons</a>
+    <div class="new">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <!-- Brand/Logo -->
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/core-img/logo.png" alt="Logo">
+                </a>
+                <!-- Mobile menu toggle button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" 
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" 
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Offcanvas menu container -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" 
+                     aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" 
+                                aria-label="Close"></button>
                     </div>
-                </li>
-                <li><a href="about-us.html">ABOUT US</a></li>
-                <li><a href="services.html">SERVICES</a></li>
-                <li><a href="blog.html">NEWS</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-                <li><a href="hh.html" class="appointment-btn">Appointment</a></li>
-            </ul>
-        </div>
-     </head>
+                    <div class="offcanvas-body">
+                        <!-- Navigation links -->
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                           
+                            <!-- Dropdown menu -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" 
+                                   data-bs-toggle="dropdown" aria-expanded="false">
+                                    Services
+                                </a>
+                                <ul class="dropdown-menu">
+                                    
+                                    <li><a href="index.html" class="dropdown-item">Home</a></li>
+                                  <li><a href="about-us.html" class="dropdown-item">About Us</a></li>
+                                 <li><a href="services.html" class="dropdown-item">Services</a></li>
+                                  <li><a href="blog.html" class="dropdown-item">News</a></li>
+                                 <li><a href="contact.html" class="dropdown-item">Contact</a></li>
+                                </ul>
+                            </li>
+
+                            
+
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="about-us.html">About Us </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="services.html">SERVICES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">CONTACT</a>
+                            </li>
+                            <!-- Appointment button -->
+                            <li class="nav-item">
+                                <a class="nav-link appointment-btn" href="hh.html" >Make Appointment</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+        
     <!-- ***** Header Area End ***** -->
 
     <!-- ***** Breadcumb Area Start ***** -->
@@ -391,6 +430,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

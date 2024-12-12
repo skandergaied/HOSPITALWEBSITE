@@ -212,3 +212,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+//humberguer 
+
+
+const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+const navbarMenu = document.getElementById("navbar-menu");
+
+// Add click event listener to toggle the menu
+mobileMenuBtn.addEventListener("click", () => {
+    // Toggle 'active' class for animation and visibility
+    mobileMenuBtn.classList.toggle("active");
+    navbarMenu.classList.toggle("active");
+});

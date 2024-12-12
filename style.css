@@ -482,118 +482,154 @@ img {
 
    }
 
-  /*
-   newww 
+    /*
+    newww 
 
-  */
-  .new {
-    font-family: Arial, sans-serif;
-    position: fixed;
-    width: 100%;  
-  top: 0;
-  right: 0;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-    background-color: rgb(42, 168, 255); /* Matches the blue background in the image */
-  padding: 15px 100px;
-}
+    */
+    /* Main navbar container */
+   
+    .new {
+        font-family: Arial, sans-serif;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+        background-color: rgb(42, 168, 255);
+    }
 
-.navbar-brand img {
-  max-height: 40px;
-}
+    /* Navbar padding and spacing */
+    .navbar {
+        padding: 15px 150px;
+    }
 
-.navbar1 {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  gap: 2rem;
-  align-items: center;
-}
+    /* Brand/Logo styling */
+    .navbar-brand {
+        color: #ffffff;
+    }
 
-.navbar1 li {
-  position: relative;
-}
+    /* Navigation links styling */
+    .navbar-nav .nav-link {
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 0.5rem 0;
+        margin: 0 1rem;
+    }
 
-.navbar1 a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 0.5rem 0;
-}
+    .navbar-nav .nav-link:hover {
+        color: #f8f9fa;
+    }
 
-.dropdown-toggle::after {
-  display: inline-block;
-  margin-left: 0.255em;
-  vertical-align: 0.255em;
-  content: "";
-  border-top: 0.3em solid;
-  border-right: 0.3em solid transparent;
-  border-bottom: 0;
-  border-left: 0.3em solid transparent;
-}
+    /* Dropdown menu styling */
+    .dropdown-menu {
+        background: rgb(105, 9, 9);
+        min-width: 200px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        border-radius: 4px;
+    }
 
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  background: white;
-  min-width: 40%;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  border-radius: 4px;
-  padding: 0.5rem 0;
-}
+    .dropdown-item {
+        color: #333;
+        padding: 0.5rem 1rem;
+    }
 
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
+    .dropdown-item:hover {
+        background-color: #f8f9fa;
+    }
 
-.dropdown-item {
-  color: #333 !important;
-  padding: 0.5rem 1rem;
-  display: block;
-}
+    /* Appointment button styling */
+    .appointment-btn {
+        background-color: #c5cae9 !important;
+        color: #1a237e !important;
+        padding: 0.75rem 1.5rem !important;
+        border-radius: 50px !important;
+        font-weight: 600 !important;
+        margin-left: 1rem;
+        transition: all 0.3s ease !important;
+    }
 
-.dropdown-item:hover {
-  background-color: #f8f9fa;
-}
+    .appointment-btn:hover {
+        background-color: #ffffff !important;
+        color: #1a237e !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
 
-/* Add this to your existing CSS */
-.appointment-btn {
-  background-color: #c5cae9 !important; /* Light blue background */
-  color: #1a237e !important; /* Dark blue text */
-  padding: 0.75rem 1.5rem !important;
-  border-radius: 50px !important;
-  font-weight: 600 !important;
-  margin-left: 1rem;
-  transition: all 0.3s ease !important;
-}
+    /* Mobile menu button styling */
+    .navbar-toggler {
+        border-color: #ffffff;
+    }
 
-.appointment-btn:hover {
-  background-color: #ffffff !important;
-  color: #1a237e !important;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
 
-/* Adjust the navbar1 gap to accommodate the button */
-.navbar1 {
-  gap: 1.5rem;
-}
+    /* Offcanvas mobile menu styling */
+    .offcanvas {
+        background-color: rgb(12, 15, 17);
+    }
 
-/* Ensure the button doesn't get the regular nav link styling */
-.navbar1 a.appointment-btn.active,
-.navbar1 a.appointment-btn:hover {
-  background-color: #ffffff !important;
-  color: #1a237e !important;
-}
-   /*
-   newww 
+    .offcanvas-header .btn-close {
+        background-color: #ffffff;
+    }
 
-  */
+    .offcanvas-title {
+        color: #ffffff;
+    }
+
+    .bg-overlay::after {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #006cff;
+      opacity: 0.85;
+      content: '';
+  }
   
+  .main-header-area {
+    background-color: rgba(16, 33, 57, 0.5);
+}
+
+    /* Responsive adjustments */
+    @media screen and (max-width: 1024px) {
+        .navbar {
+            padding: 15px 30px;
+        }
+    }
+
+    @media (max-width: 992px) {
+      #offcanvasNavbar {
+          background-color: #3d67c9; 
+      }
+  
+      #offcanvasNavbar .nav-link {
+          color: white; 
+      }
+  }
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+    /*
+    newww 
+
+    */
+    
 
  
 
@@ -780,8 +816,10 @@ textarea {
     .medilife-book-an-appoinment-area {
       position: relative;
       z-index: 1;
-      margin-top: 0;
+      
       padding-top: 60px;
+      padding-bottom: 60px;
+
   }
   .medilife-book-an-appoinment-area .appointment-form-content {
     background-color: #081f3e; }
