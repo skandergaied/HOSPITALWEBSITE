@@ -48,8 +48,7 @@
   margin: 0;
   padding: 0; }
 
-body {
-  font-family: "Roboto", sans-serif; }
+
 
 h1,
 h2,
@@ -82,7 +81,8 @@ a {
     font-weight: 700; }
 
 #preloader {
-  overflow: hidden;
+  
+  overflow: hidden; 
   height: 100%;
   left: 0;
   position: fixed;
@@ -221,10 +221,10 @@ img {
   height: 800px !important; }
 
 #scrollUp {
-  background-color: #006cff;
+  background-color: #ff0000;
   border-radius: 50%;
-  bottom: 60px;
-  right: 60px;
+  bottom: 30px;
+  right: 30px;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
   color: #ffffff;
   font-size: 30px;
@@ -489,18 +489,29 @@ img {
     /* Main navbar container */
    
     .new {
-        font-family: Arial, sans-serif;
+        font-family: 'Arial', sans-serif;
         position: fixed;
         width: 100%;
         top: 0;
+        padding-top: 10px;
         right: 0;
         z-index: 1000;
         background-color: rgb(42, 168, 255);
-    }
+       
+        height: 12vh;
+        padding-right: 25px;
 
-    /* Navbar padding and spacing */
+    }
+    .new * {
+      font-family: inherit; /* Ensure child elements inherit the font */
+  }
+
+    
     .navbar {
         padding: 15px 150px;
+        font-size: 16px;       
+        font-weight: 400px;
+
     }
 
     /* Brand/Logo styling */
@@ -638,15 +649,22 @@ img {
     color: #fff; 
     transition: color 0.3s ease-in-out;
 }
+
 .breadcumb-area {
-  padding-top: 100px; /* Space below the navbar */
-  height: 350px; /* Adjust height if needed */
+  position: relative;
+  padding-top: 100px;
+  height: 350px;
+  background-image: url(img/bg-img/stock-photo-young.jpg);
+  background-size: cover;
+  background-position: center;
+  margin-top: 75px;
+  z-index: 1;
 }
 
 .breadcumb-title {
-  font-size: 50px; /* Slightly smaller font for better balance */
+  font-size: 10px; /* Slightly smaller font for better balance */
   margin-bottom: 20px;
-  color: #59d2e2;
+  color: #031719;
 }
 
 .navbar-nav .nav-link:hover {
@@ -784,6 +802,14 @@ img {
   -ms-flex-align: stretch;
   -ms-grid-row-align: stretch;
   align-items: stretch; }
+ 
+  #doctors,
+  #appointmentType,#gender {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 170, 255, 0.5);
+    background-color: white;
+  }
+
 
 .form-control {
   background-color: transparent;
@@ -796,7 +822,9 @@ img {
   margin-bottom: 30px;
   font-weight: 500;
   padding: 0 15px;
-  border: 2px solid #536174; }
+  border: 2px solid #536174;
+  margin: 0%;
+ }
   .form-control:hover, .form-control:focus {
     background-color: transparent;
     box-shadow: none; }
@@ -815,20 +843,47 @@ textarea {
 
     .medilife-book-an-appoinment-area {
       position: relative;
+      justify-content: center;
       z-index: 1;
+      padding-top: 70px;
+      padding-bottom: 1200px;
+      width: 80%;
+      margin: 10vh 0 0 20vh;
+      height: 400px;
+      background-image: url('img/bg-img/Copy.png');
+      background-size: cover;
+      background-position: center;
+      align-items: center;
+      min-height: 100vh;
       
-      padding-top: 60px;
-      padding-bottom: 60px;
 
   }
-  .medilife-book-an-appoinment-area .appointment-form-content {
-    background-color: #081f3e; }
+ 
+ 
   .medilife-book-an-appoinment-area .medilife-appointment-form {
-    background-color: #081f3e;
-    padding: 60px 50px; }
+    background-color: rgb(5 51 75 / 50%);
+    
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: auto;
+    
+    padding: 20px 20px 60px 50px; }
+    
     .medilife-book-an-appoinment-area .medilife-appointment-form select {
       border: 2px solid #536174;
-      background-color: transparent; }
+      background-color: transparent; 
+        
+    }
+    input:focus {
+      background: #000;
+      transform: scale(1.1)
+       ;
+       color: #000;
+
+    }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       .medilife-book-an-appoinment-area .medilife-appointment-form {
         padding: 40px 30px; } }
@@ -837,10 +892,14 @@ textarea {
         padding: 30px; } }
     @media only screen and (max-width: 767px) {
       .medilife-book-an-appoinment-area .medilife-appointment-form button[type=submit] {
-        margin-top: 15px; } }
+        margin-top: 15px; 
+        background-color: yellowgreen;
+      } }
   .medilife-book-an-appoinment-area .medilife-contact-info {
-    padding: 30px;
-    background-color: #006cff; }
+    padding: 60px;
+    background-color: #006cff;
+    margin: 15px;
+   }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       .medilife-book-an-appoinment-area .medilife-contact-info {
         display: -webkit-box;
@@ -849,7 +908,9 @@ textarea {
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-between;
-        padding-bottom: 0; } }
+        padding-bottom: 0; 
+        margin: 5px;      
+      } }
 
 .single-contact-info img {
   margin-bottom: 15px; }
@@ -937,7 +998,8 @@ textarea {
     left: 40px;
     z-index: 9;
     -webkit-transition-duration: 500ms;
-    transition-duration: 500ms; }
+    transition-duration: 500ms;
+  background-color: #59d2e2; }
     .single-gallery-item .view-more-btn a {
       background-color: transparent;
       font-size: 16px;
@@ -965,14 +1027,18 @@ textarea {
 
 /* :: 11.0 Emergency Area CSS */
 .medilife-emergency-area {
-  background-color: #006cff; 
-  height: 400;
+  background-color: rgb(42, 168, 255); 
+  height: 10%;
+  font-size: 160px; 
 }
+
   .medilife-emergency-area .emergency-content i {
     font-size: 130px;
     color: #ffffff;
     display: block;
-    margin-bottom: 50px; }
+    margin-bottom: 10px;
+    margin-top: 10px;
+   }
   .medilife-emergency-area .emergency-content h2 {
     font-size: 44px;
     margin-bottom: 20px; }
@@ -1134,7 +1200,7 @@ textarea {
       .breadcumb-area .breadcumb-title {
         font-size: 30px; } }
   .breadcumb-area::after {
-    background-color: rgba(230, 241, 255, 0.75);
+    background-color: rgb(161 179 204 / 75%);
     content: '';
     top: 0;
     left: 0;
@@ -1609,17 +1675,24 @@ textarea {
 .leave-comment-area .contact-form .form-group,
 .medilife-contact-area .comment-form .form-group,
 .medilife-contact-area .contact-form .form-group {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+   
+}
+.form-group {
+  padding: 0;
+  display: block;
+  
+}
 .leave-comment-area .comment-form .form-control,
 .leave-comment-area .contact-form .form-control,
 .medilife-contact-area .comment-form .form-control,
 .medilife-contact-area .contact-form .form-control {
-  width: 100%;
+  width: 10%;
   height: 55px;
   background-color: #f5f7f9;
   padding: 15px;
   border: none;
-  font-size: 12px;
+  font-size: 120px;
   font-style: italic;
   margin-bottom: 0 !important; }
 .leave-comment-area .comment-form textarea.form-control,
@@ -1843,4 +1916,27 @@ textarea {
     .all-icons-area .medilife-single-icon:hover span, .all-icons-area .medilife-single-icon:focus span {
       color: #ffffff; }
 
-/*# sourceMappingURL=style.css.map */
+
+
+      h1 {
+        color: #007bff;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    p {
+        text-align: center;
+        color: #07121c;
+        margin-bottom: 2rem;
+    }
+
+
+    .feedback-section {
+      background-image: url('img/bg-img/360_F_92345.jpg');
+      background-size: cover; /* Ensures the image covers the section */
+      background-position: center; /* Centers the image */
+      background-repeat: no-repeat; /* Prevents the image from repeating */
+      margin: 0 auto 80px auto; /* Top and bottom margin, auto centers horizontally */
+      width: 80%; 
+      height: 400px; 
+  }
