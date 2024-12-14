@@ -31,6 +31,8 @@
 :: 19.0 Blog Area CSS
 :: 20.0 Contact Area CSS
 :: 21.0 Shortcode Area CSS
+
+/*changed
 ------------------------------------------------ */
 /* :: 1.0 Import Fonts */
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900");
@@ -1814,7 +1816,6 @@ textarea {
       color: #ffffff; }
 
 /*# sourceMappingURL=style.css.map */
-
 
 .form-groupp {
   margin-bottom: 20px;
