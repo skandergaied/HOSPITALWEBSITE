@@ -82,6 +82,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="services.html">Services</a>
                             </li>
+                            
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html">Contact</a>
                             </li>
@@ -100,7 +101,7 @@
     <!-- ***** Header Area End ***** -->
 
     <!-- ***** Breadcumb Area Start ***** -->
-    <section class="breadcumb-area bg-img gradient-background-overlay" style="background-image: url(img/bg-img/breadcumb3.jpg);">
+    <section class="breadcumb-area bg-img gradient-background-overlay" >
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
@@ -141,29 +142,19 @@
         
                         <script>
                             document.addEventListener("DOMContentLoaded", function () {
-                                const form = document.getElementById("contactForm");
                                 const button = document.querySelector(".btn.medilife-btn");
                                 const alertBox = document.getElementById("customAlert");
                                 const closeButton = document.getElementById("closeAlert");
         
                                 // click button
-                                form.addEventListener("submit", function (event) {
-                                    event.preventDefault(); // PREVENT
-                                    
-                                    const name = document.getElementById("contact-name").value;
-                                    const email = document.getElementById("contact-email").value;
-                                    const message = document.getElementById("message").value;
-        
-                                    if (name && email && message) {
-                                        alertBox.style.display = "block"; 
-                                    } else {
-                                        alert("Please fill in all fields."); 
-                                    }
+                                button.addEventListener("click", function (event) {
+                                    event.preventDefault(); // Varsayılan işlemi engelle
+                                    alertBox.style.display = "block"; // Alert kutusunu göster
                                 });
         
                                 // close Alert
                                 closeButton.addEventListener("click", function () {
-                                    alertBox.style.display = "none"; 
+                                    alertBox.style.display = "none"; // Alert kutusunu gizle
                                 });
                             });
                         </script>
@@ -240,6 +231,7 @@
         </div>
     </section>
 
+             
     <!-- Google Maps -->
     <div class="map-area mb-100">
         <div class="container">
@@ -287,8 +279,8 @@
                                         <img src="img/blog-img/ln1.jpg" alt="">
                                     </div>
                                     <div class="widget-post-content">
-                                        <a href="blog.html">Better Health Care</a>
-                                        <p>Dec 15, 2024</p>
+                                        <a href="#">Better Health Care</a>
+                                        <p>Dec 02, 2017</p>
                                     </div>
                                 </div>
                                 <!-- Single Blog Post -->
@@ -297,8 +289,8 @@
                                         <img src="img/blog-img/ln2.jpg" alt="">
                                     </div>
                                     <div class="widget-post-content">
-                                        <a href="blog.html">A new drug is tested</a>
-                                        <p>Dec 15, 2024</p>
+                                        <a href="#">A new drug is tested</a>
+                                        <p>Dec 02, 2017</p>
                                     </div>
                                 </div>
                                 <!-- Single Blog Post -->
@@ -307,8 +299,8 @@
                                         <img src="img/blog-img/ln3.jpg" alt="">
                                     </div>
                                     <div class="widget-post-content">
-                                        <a href="blog.html">Health department advice</a>
-                                        <p>Dec 15, 2024</p>
+                                        <a href="#">Health department advice</a>
+                                        <p>Dec 02, 2017</p>
                                     </div>
                                 </div>
                             </div>
@@ -361,9 +353,8 @@
 
                                 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://google.com" target="_blank">GroupZ</a>
-                                <p>
-                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p>
 <p>Re-distributed by <a href="https://google.com/" target="_blank">GroupZ</a>
 </p>
                             </div>

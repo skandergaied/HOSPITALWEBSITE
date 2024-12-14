@@ -58,14 +58,14 @@
                         <!-- Navigation links -->
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                                <a class="nav-link" aria-current="page" href="index.html">Home</a>
                             </li>
                            
                             <!-- Dropdown menu -->
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" 
                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Services
+                                    Pages
                                 </a>
                                 <ul class="dropdown-menu">
                                     
@@ -84,14 +84,14 @@
                                 <a class="nav-link" href="about-us.html">About Us </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="services.html">SERVICES</a>
+                                <a class="nav-link" href="services.html">Services</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">CONTACT</a>
+                                <a class="nav-link" href="contact.html">Contact</a>
                             </li>
                             <!-- Appointment button -->
                             <li class="nav-item">
-                                <a class="nav-link appointment-btn" href="hh.html" >Make Appointment</a>
+                                <a class="nav-link appointment-btn" href="appointment.html" >Make Appointment</a>
                             </li>
                         </ul>
                     </div>
@@ -107,10 +107,10 @@
         <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30"
         centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
         
-        <swiper-slide><img src="img/bg-img/hero1.jpg" alt="A beautiful scenery" width="600" height="400"></swiper-slide>
+        <swiper-slide><img src="img/bg-img/doctors-1920.webp" alt="A beautiful scenery" width="600" height="400"></swiper-slide>
         <swiper-slide><img src="img/bg-img/breadcumb3.jpg" alt="A beautiful scenery" width="600" height="400"></swiper-slide>
-        <swiper-slide><img src="img/bg-img/breadcumb1.jpg" alt="A beautiful scenery" width="600" height="400"> </swiper-slide>
-        
+        <swiper-slide><img src="img/bg-img/pagetitles-doctors1.jpg" alt="A beautiful scenery" width="600" height="400"> </swiper-slide>
+        <swiper-slide><img src="img/bg-img/shutterstock_620003576.jpg" alt="A beautiful scenery" width="600" height="400"> </swiper-slide>
       </swiper-container>
      </div>
     
@@ -121,113 +121,143 @@
             <div class="row">
                 <div class="col-12">
                     <div class="appointment-form-content">
-                        <div class="row no-gutters align-items-center">
+                        <div class="row no-gutters justify-content-center">
                             <div class="col-12 col-lg-9">
                                 <div class="medilife-appointment-form">
                                     <form action="#" method="post">
-                                        <div class="row align-items-end">
-                                            <div class="col-12 col-md-4">
+                                        <div class="row">
+                                            <div class="col-12 mb-2">
+                                                <h1>APPOINT MY DOCTOR</h1>
+                                                <p>Please Enter Patients Details</p>
+                                            </div>
+                                            
+                                            <div class="col-12 mb-2">
                                                 <div class="form-group">
-                                                    <select class="form-control" id="speciality">
-                                                    <option>Speciality 1</option>
-                                                    <option>Speciality 2</option>
-                                                    <option>Speciality 3</option>
-                                                    <option>Speciality 4</option>
-                                                    <option>Speciality 5</option>
-                                                </select>
+                                                    <label>Select types of appointment *</label>
+                                                    <select class="form-control" id="appointmentType" required>
+                                                        <option>  </option>
+                                                        <option>Heart Checkup</option>
+                                                        <option>Blood Test</option>
+                                                        <option>Eye Checkup</option>
+                                                        <option>Normal Consulting</option>
+                                                        <option>Hearing Test</option>
+                                                        <option>Skin Care</option>
+
+                                                    </select>
                                                 </div>
                                             </div>
-                                            <div class="col-12 col-md-4">
+    
+                                            <div class="col-12 mb-2">
                                                 <div class="form-group">
+                                                    <label for="uniqueMobileNumber">Doctors</label>
                                                     <select class="form-control" id="doctors">
-                                                    <option>Doctors 1</option>
-                                                    <option>Doctors 2</option>
-                                                    <option>Doctors 3</option>
-                                                    <option>Doctors 4</option>
-                                                    <option>Doctors 5</option>
+                                                        <option>   </option>
+                                                        <option>Alexander Fleming</option>
+                                                        <option>Helen Brooke Taussig</option>
+                                                        <option>Charles Richard Drew</option>
+                                                        <option>Michael Ellis DeBakey</option>
+                                                        <option>Virginia Apgar</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+    
+                                            <div class="col-12 mb-2">
+                                                <div class="form-group">
+                                                    <label for="uniqueMobileNumber">Mobile Number *</label>
+                                                    <input  type="date" id="start" class="form-control border-top-0 border-right-0 border-left-0" name="trip-start" value="2024-07-22" min="2024-01-01" max="2024-12-31"  />
+                                                </div>
+                                            </div>
+    
+                                            <div class="col-12 mb-2">
+                                                <div class="form-group">
+                                                    <label for="uniqueMobileNumber">Mobile Number *</label>
+                                                    <select class="form-control" id="doctors">
+                                                        <option value="08-09">08-09</option>
+                                                        <option value="09-10">09-10</option>
+                                                        <option value="10-11">10-11</option>
+                                                        <option value="11-12">11-12</option>
+                                                        <option value="12-13">12-13</option>
+                                                        <option value="14-15">14-15</option>
+                                                        <option value="15-16">15-16</option>
+                                                        <option value="16-17">16-17</option>
+                                                        <option value="17-18">17-18</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+    
+                                            <div class="col-12 mb-2">
+                                                <div class="form-group">
+                                                    <label for="uniqueMobileNumber">Name</label>
+                                                    <input required type="text" class="form-control border-top-0 border-right-0 border-left-0" name="name" id="name1" placeholder="Name">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 mb-2">
+                                                <div class="form-group">
+                                                    <label for="uniqueMobileNumber">Gender</label>
+                                                <select id="gender" class="form-control border-top-0 border-right-0 border-left-0" required>
+                                                    <option value="">Select</option>
+                                                    <option value="male">Male</option>
+                                                    <option value="female">Female</option>
+                                                   
                                                 </select>
-                                                </div>
                                             </div>
-                                            <div class="col-12 col-md-2">
+                                        </div>
+                                            <div class="col-12 mb-2">
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" name="date" id="date" placeholder="Date">
+                                                    <label for="uniqueMobileNumber">Mobile Number *</label>
+                                                    <input type="number" class="form-control border-top-0 border-right-0 border-left-0" name="number1" id="number1" placeholder="Phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" maxlength="8">
                                                 </div>
                                             </div>
-                                            <div class="col-12 col-md-2">
+    
+                                            <div class="col-12 mb-2">
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" name="time" id="time" placeholder="Time">
+                                                    <label for="uniqueMobileNumber">E-Mail Address</label>
+                                                    <input required type="email" class="form-control border-top-0 border-right-0 border-left-0" name="email" id="email" placeholder="myname@example.com">
                                                 </div>
                                             </div>
-                                            <div class="col-12 col-md-4">
+    
+                                            <div class="col-12 mb-2">
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0" name="name" id="name" placeholder="Name">
+                                                    <label for="consultingDetails">Previous Consulting Details</label>
+                                                    <textarea   required name="message" class="form-control border-top-0 border-right-0 border-left-0" id="message" cols="30" rows="5" placeholder="Message"></textarea>
                                                 </div>
                                             </div>
-                                            <div class="col-12 col-md-4">
+    
+                                            <div class="col-12">
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0" name="number" id="number" placeholder="Phone">
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-md-4">
-                                                <div class="form-group">
-                                                    <input type="email" class="form-control border-top-0 border-right-0 border-left-0" name="email" id="email" placeholder="E-mail">
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-md-7">
-                                                <div class="form-group mb-0">
-                                                    <textarea name="message" class="form-control mb-0 border-top-0 border-right-0 border-left-0" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-md-5 mb-0">
-                                                <div class="form-group mb-0">
-                                                    <button type="submit" class="btn medilife-btn">Make an Appointment <span>+</span></button>
+                                                    
+                                                    <button type="button" id="submitBtn" class="btn btn-primary">BOOK APPOINTMENT</button>
                                                 </div>
                                             </div>
                                         </div>
                                     </form>
                                 </div>
                             </div>
-                            <div class="col-12 col-lg-3">
-                                <div class="medilife-contact-info">
-                                    <!-- Single Contact Info -->
-                                    <div class="single-contact-info mb-30">
-                                       <!-- <img src="img/icons/alarm-clock.png" alt="">-->
-                                       
-                                        <p><i class="fa-solid fa-business-time"></i>   Mon - Sat 08:00 - 21:00 </p>
-                                        <!-- <i class="fa-sharp fa-regular fa-clock"></i>-->
-                                        
-                                    </div>
-                                    <!-- Single Contact Info -->
-                                    <div class="single-contact-info mb-30">
-                                        <p><i class="fa-solid fa-phone"></i>   0080 673 729 766 <br><i class="fa-solid fa-envelope"></i>  contact@business.com</p>
-                                    </div>
-                                    <!-- Single Contact Info -->
-                                    <div class="single-contact-info">
-                                        <p><i class="fa-solid fa-location-dot"></i>   Lamas Str, no 14-18 <br>41770 Miami</p>
-                                    </div>
-                                </div>
-                            </div>
+                            
+                          
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> 
     <!-- ***** Book An Appoinment Area End ***** -->
 
     <!-- ***** About Us Area Start ***** -->
     <section class="medica-about-us-area section-padding-100-20">
-        <div class="container">
+  
+<div class="container">
             <div class="row">
                 <div class="col-12 col-lg-4">
                     <div class="medica-about-content">
-                        <h2>We always put our pacients first</h2>
-                        <p>At our facility, we prioritize patient-centered care by providing personalized attention and support.
-                            Comprehensive Assessments: Understanding your unique needs.
-                            Customized Treatment Plans: Tailored to your goals.
-                            Ongoing Support: Empowering you on your health journey.
-                            Your well-being is our top priority!
-                            </p>
+                        <h2>We Always Put Our Patients First</h2>
+                        <p>At our facility, your health and well-being are our top priorities. We are dedicated to providing compassionate, patient-centered care through: </p>
+                        <ul>
+                        <li><strong>Comprehensive Assessments:</strong> Taking the time to understand your unique needs and concerns.</li>
+                        <li><strong>Personalized Treatment Plans:</strong> Crafting solutions tailored to your specific goals and health objectives.</li>
+                        <li><strong>Continuous Support:</strong> Guiding you every step of the way on your journey to better health.</li></ul>
+                        <p>Your trust inspires us to deliver the highest standard of care, ensuring that you always come first.</p>
                     </div>
                 </div>
                 <div class="col-12 col-lg-8">
@@ -372,9 +402,8 @@
             <div class="row align-items-center">
                 <div class="col-12 col-lg-6">
                     <div class="features-content">
-                        <h2>A new way to treat pacients in a revolutionary facility</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli.Lorem ipsum dolor sit amet, consec tetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer.</p>
-                        <a href="#" class="btn medilife-btn mt-50">View the services <span>+</span></a>
+                        <h2>A New Way to Treat Patients in a Revolutionary Facility</h2>
+                        <p>Experience cutting-edge medical care in a state-of-the-art facility designed to revolutionize the way we approach patient treatment. Our innovative methods focus on combining advanced technology with compassionate, personalized care to ensure the best outcomes for every patient. Discover a new standard of healthcare that prioritizes your well-being at every step of your journey.</p>                                  
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
@@ -473,38 +502,7 @@
                         <h3>+12-823-611-8721</h3>
                     </div>
                 </div>
-                <div class="col-12 col-lg-6">
-                    <div class="row">
-                        <!-- Single Emergency Helpline -->
-                        <div class="col-12 col-sm-6">
-                            <div class="single-emergency-helpline mb-50">
-                                <h5>London</h5>
-                                <p>0080 673 729 766 <br> contact@business.com <br> Lamas Str, no 14-18 <br> 41770 Miami</p>
-                            </div>
-                        </div>
-                        <!-- Single Emergency Helpline -->
-                        <div class="col-12 col-sm-6">
-                            <div class="single-emergency-helpline mb-50">
-                                <h5>New Castle</h5>
-                                <p>0080 673 729 766 <br> contact@business.com <br> Lamas Str, no 14-18 <br> 41770 Miami</p>
-                            </div>
-                        </div>
-                        <!-- Single Emergency Helpline -->
-                        <div class="col-12 col-sm-6">
-                            <div class="single-emergency-helpline mb-50">
-                                <h5>Manchester</h5>
-                                <p>0080 673 729 766 <br> contact@business.com <br> Lamas Str, no 14-18 <br> 41770 Miami</p>
-                            </div>
-                        </div>
-                        <!-- Single Emergency Helpline -->
-                        <div class="col-12 col-sm-6">
-                            <div class="single-emergency-helpline mb-50">
-                                <h5>Bristol</h5>
-                                <p>0080 673 729 766 <br> contact@business.com <br> Lamas Str, no 14-18 <br> 41770 Miami</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              
             </div>
         </div>
     </div>
@@ -632,15 +630,14 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
     <script src="js/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="js/bootstrap.min.js"></script>
+    
     <!-- Plugins js -->
     <script src="js/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="js/appointementjspart.js"></script>
 
 </body>
 
