@@ -162,18 +162,18 @@
     <section class="feedback-section section-padding-70">
         <div class="container">
             <h2 class="text-center">Share Your Thoughts About Our Services</h2>
-            <form method="post" class="mt-4">
-                <div class="form-group">
+            <form action="/submit-feedback" id="feedbackForm"method="post" class="mt-4">
+                <div class="form-groupp">
                     <label for="name">Your Name</label>
-                    <input type="text" name="name" id="name" class="form-control" required>
+                    <input type="text" name="name" id="name" class="form-controll" placeholder="Please Enter Name"required>
                 </div>
-                <div class="form-group">
+                <div class="form-groupp">
                     <label for="email">Your Email</label>
-                    <input type="email" name="email" id="email" class="form-control" required>
+                    <input type="email" name="email" id="email" class="form-controll" placeholder="Please Enter E-mail"required>
                 </div>
-                <div class="form-group">
+                <div class="form-groupp">
                     <label for="feedback">Your Feedback</label>
-                    <textarea name="feedback" id="feedback" class="form-control" rows="5" required></textarea>
+                    <textarea name="feedback" id="feedback" class="form-controll" rows="5" placeholder="Please Enter Feedback"required></textarea>
                 </div>
                 <div class="text-center section-padding-100">
                     <button type="button" class="btn btn-primary" onclick="showAlert()">Submit Feedback</button>
@@ -187,13 +187,75 @@
             alert("Thank you for your feedback!");
         }
     </script>
+
+<section id="payment-methods" class="payment-methods-section section-padding-70">
+    <div class="container">
+        <h2 class="main-title">Payment Methods</h2>
+        
+        <div class="payment-method">
+            <h4 class="payment-title">Credit Cards</h4>
+            <p class="payment-description">
+                We accept major credit cards such as Visa, MasterCard, and American Express. All credit card transactions are securely processed with the latest encryption technology.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+        </div>
+        
+        <div class="payment-method">
+            <h4 class="payment-title">PayPal</h4>
+            <p class="payment-description">
+                For your convenience, we also accept payments through PayPal. You can securely complete your payment through your PayPal account.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+        </div>
+        
+        <div class="payment-method">
+            <h4 class="payment-title">Bank Transfer</h4>
+            <p class="payment-description">
+                You can opt for a direct bank transfer if you prefer. Please reach out to our support team for the necessary bank account details to complete the transaction.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+        </div>
+        
+        <div class="payment-method">
+            <h4 class="payment-title">Cash on Arrival</h4>
+            <p class="payment-description">
+                For local customers, we offer a "Cash on Arrival" option. You can pay for your services directly upon arrival at our location.
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ***** Video Area Start ***** -->
+<section class="medilife-video-area section-padding-100 bg-overlay bg-img" style="background-image: url(img/bg-img/video.jpg);">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-8">
+                <div class="video-box bg-overlay-black">
+                    <img src="img/bg-img/video2.jpg" alt="">
+                    <div class="play-btn">
+                        <a class="popup-video" href="http://www.youtube.com/watch?v=0O2aH4XLbto"><img src="img/core-img/play.png" alt=""></a>
+                        <h6>A day at Medilife-Video</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="video-content">
+                    <h2>A day at Medilife -Video</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing eli. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+   
     
     
 
    
 
     <div class="medilife-services-area clearfix">
-        <!-- Single Services Area -->
+       
         <div class="singleServiceArea equalize d-flex">
             <div class="singleServiceIcon">
                 <i class="icon-hospital-4"></i>
@@ -204,10 +266,10 @@
             </div>
         </div>
 
-        <!-- Single Services Area -->
+   
         <div class="singleServiceArea equalize bg-img" style="background-image: url(img/bg-img/about1.jpg);"></div>
 
-        <!-- Single Services Area -->
+   
         <div class="singleServiceArea equalize d-flex">
             <div class="singleServiceIcon">
                 <i class="icon-clinic-history-2"></i>
@@ -436,3 +498,4 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 </body>
 
 </html>
+
