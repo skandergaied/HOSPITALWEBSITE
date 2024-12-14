@@ -398,7 +398,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #006cff;
+    background-color:#93a4bc;   
     opacity: 0.85;
     content: ''; }
 
@@ -503,7 +503,7 @@ img {
 
     }
     .new * {
-      font-family: inherit; /* Ensure child elements inherit the font */
+      font-family: inherit; 
   }
 
     
@@ -654,12 +654,13 @@ img {
   position: relative;
   padding-top: 100px;
   height: 350px;
-  background-image: url(img/bg-img/stock-photo-young.jpg);
+  background-image: url(img/bg-img/Operational-Outcomes-scaled.jpg);
   background-size: cover;
   background-position: center;
   margin-top: 75px;
   z-index: 1;
 }
+
 
 .breadcumb-title {
   font-size: 10px; /* Slightly smaller font for better balance */
@@ -1344,7 +1345,7 @@ textarea {
   z-index: 1;
   width: 33.3333333%;
   display: inline-block;
-  float: left;
+ 
   padding: 70px 40px 100px; }
   .singleServiceArea:first-child {
     background-color: #006cff; }
@@ -1786,12 +1787,14 @@ textarea {
     
    .swiper{
     width: 100%;
-    padding-top : 130px;
+    padding-top : 59px;
+    
    }
   
     swiper-container {
       width: 100%;
       height: 100%;
+
     }
 
     swiper-slide {
@@ -1917,182 +1920,160 @@ textarea {
       color: #ffffff; }
 
 
+/*# sourceMappingURL=style.css.map */
+#customAlert {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border: 1px solid #fff;
+  padding: 40px; /* Increased padding to make the box larger */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 1000;
+  width: 300px; /* Optional: You can set a fixed width to ensure consistency */
+}
 
-      h1 {
-        color: #007bff;
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-    
-    p {
-        text-align: center;
-        color: #07121c;
-        margin-bottom: 2rem;
-    }
+#customAlert p {
+  font-size: 20px; /* Increased font size for the success message */
+  margin-bottom: 20px; /* Space below the text */
+}
+
+#customAlert button {
+  background-color: #007bff;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 15px 30px; /* Increased padding for the button */
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#customAlert button:hover {
+  background-color: #0056b3;
+}
+
+/* Normal link color */
+.medilife-contact-card .contact-meta a {
+  color: #007bff; /* Default color */
+  text-decoration: none;
+}
+
+/* Style for the active (clicked) and focused link */
+.medilife-contact-card .contact-meta a.clicked {
+  color: #ee5eeb; /* Change to your desired color */
+  text-decoration: underline; /* Optional: adds an underline */
+}
 
 
-    .feedback-section {
-      background-image: url('img/bg-img/360_F_92345.jpg');
-      background-size: cover; /* Ensures the image covers the section */
-      background-position: center; /* Centers the image */
-      background-repeat: no-repeat; /* Prevents the image from repeating */
-      margin: 0 auto 80px auto; /* Top and bottom margin, auto centers horizontally */
-      width: 80%; 
-      height: 400px; 
-  }
-  #customAlert {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #ffffff;
-    border: 1px solid #fff;
-    padding: 40px; /* Increased padding to make the box larger */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    z-index: 1000;
-    width: 300px; /* Optional: You can set a fixed width to ensure consistency */
-  }
-  
-  #customAlert p {
-    font-size: 20px; /* Increased font size for the success message */
-    margin-bottom: 20px; /* Space below the text */
-  }
-  
-  #customAlert button {
-    background-color: #007bff;
-    color: rgb(255, 255, 255);
-    border: none;
-    padding: 15px 30px; /* Increased padding for the button */
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  
-  #customAlert button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Normal link color */
-  .medilife-contact-card .contact-meta a {
-    color: #007bff; /* Default color */
-    text-decoration: none;
-  }
-  
-  /* Style for the active (clicked) and focused link */
-  .medilife-contact-card .contact-meta a.clicked {
-    color: #ee5eeb; /* Change to your desired color */
-    text-decoration: underline; /* Optional: adds an underline */
-  }
-  
-  
-  /* Alert box styling */
-  #alertBox {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    text-align: center;
-    max-width: 400px;
-    width: 90%;
-  }
-  
-  #alertBox img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 15px;
-  }
-  
-  #alertBox button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  
-  #alertBox button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Alert box styling */
-  #alertBox {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    text-align: center;
-    max-width: 600px;
-    width: 90%;
-  }
-  
-  #alertBox img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 15px;
-  }
-  
-  #alertBox button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  
-  #alertBox button:hover {
-    background-color: #0056b3;
-  }
-  /* Comment box styling */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 30px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
-  
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
+/* Alert box styling */
+#alertBox {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+#alertBox img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+#alertBox button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#alertBox button:hover {
+  background-color: #0056b3;
+}
+
+/* Alert box styling */
+#alertBox {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  text-align: center;
+  max-width: 600px;
+  width: 90%;
+}
+
+#alertBox img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+#alertBox button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#alertBox button:hover {
+  background-color: #0056b3;
+}
+/* Comment box styling */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 30px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   .catagories-menu li {
       display: block;
@@ -2123,29 +2104,3 @@ textarea {
       width: 80%; 
       height: 400px; 
   }
-
-
- .container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.medica-about-content {
-    flex: 1;
-    padding-right: 20px;
-}
-
-.single-service-area {
-    flex: 1;
-    display: flex;
-    align-items: flex-start;
-}
-
-.service-icon {
-    margin-right: 15px;
-}
-
-
-
