@@ -117,13 +117,12 @@
     <section class="medilife-contact-area section-padding-100">
         <div class="container">
             <div class="row">
-                 <!-- Contact Form Area -->
-                 <div class="col-12 col-lg-8">
+                <div class="col-12 col-lg-8">
                     <div class="contact-form">
                         <h5 class="mb-50">Get in Touch</h5>
                         <p class="mb-50">Fill up the form to get in touch with us. </p>
         
-                        <form action="#" method="post">
+                        <form id="contactForm" action="#" method="post">
                             <div class="form-group">
                                 <input type="text" class="form-control" id="contact-name" placeholder="Name">
                             </div>
@@ -135,7 +134,6 @@
                             </div>
                             <button type="submit" class="btn medilife-btn">Send Message <span>+</span></button>
                         </form>
-        
                         <!-- alert box -->
                         <div id="customAlert" style="display:none; background-color: #f1f1f1; padding: 20px; margin-top: 20px; text-align: center;">
                             <p>Success!</p>
@@ -144,25 +142,35 @@
         
                         <script>
                             document.addEventListener("DOMContentLoaded", function () {
+                                const form = document.getElementById("contactForm");
                                 const button = document.querySelector(".btn.medilife-btn");
                                 const alertBox = document.getElementById("customAlert");
                                 const closeButton = document.getElementById("closeAlert");
         
                                 // click button
-                                button.addEventListener("click", function (event) {
-                                    event.preventDefault(); // Varsayılan işlemi engelle
-                                    alertBox.style.display = "block"; // Alert kutusunu göster
+                                form.addEventListener("submit", function (event) {
+                                    event.preventDefault(); // PREVENT
+                                    
+                                    const name = document.getElementById("contact-name").value;
+                                    const email = document.getElementById("contact-email").value;
+                                    const message = document.getElementById("message").value;
+        
+                                    if (name && email && message) {
+                                        alertBox.style.display = "block"; 
+                                    } else {
+                                        alert("Please fill in all fields."); 
+                                    }
                                 });
         
                                 // close Alert
                                 closeButton.addEventListener("click", function () {
-                                    alertBox.style.display = "none"; // Alert kutusunu gizle
+                                    alertBox.style.display = "none"; 
                                 });
                             });
                         </script>
                     </div>
                 </div>
-        
+    
                 <!-- Sidebar Area -->
                 <div class="col-12 col-lg-4">
                     <div class="content-sidebar">
@@ -185,7 +193,7 @@
                                 </div>
                                 <div class="contact-meta">
                                     <p>Phone:</p>
-                                    <a href="tel:53345795332453"> +53 345 7953 32453</a>
+                                    <a href="tel:53345795332453" class="contact-link">+53 345 7953 32453</a>
                                 </div>
                             </div>
         
@@ -194,46 +202,51 @@
                                     <i class="icon-doctor"></i>
                                 </div>
                                 <div class="contact-meta">
-                                    <p>Email:</p><a href="mailto:medilife@antalya.tr">medilife@antalya.tr</a>
+                                    <p>Email:</p><a href="mailto:medilife@antalya.tr" class="contact-link">medilife@antalya.tr</a>
                                 </div>
                             </div>
-                            <script>
-                                document.addEventListener("DOMContentLoaded", function () {
-                                    const links = document.querySelectorAll(".medilife-contact-card .contact-meta a");
-                            
-                                    links.forEach(function (link) {
-                                        link.addEventListener("click", function () {
-                                            // Toggle the 'clicked' class to make the color change permanent
-                                            link.classList.add("clicked");
+                        
+                                <style>
+                                    .contact-link.clicked {
+                                        color: #FF5733; /* Renk değişikliği, burayı ihtiyacınıza göre değiştirebilirsiniz */
+                                    }
+                                </style>
+                                
+                                <script>
+                                    document.addEventListener("DOMContentLoaded", function () {
+                                        
+                                        const links = document.querySelectorAll(".contact-link");
+                                
+                                        links.forEach(function (link) {
+                                            link.addEventListener("click", function () {
+                                                link.classList.add("clicked");
+                                            });
                                         });
                                     });
-                                });
-                            </script>
-                            
-                            
-                            <div class="contact-social-area">
-                                <a href="https://www.google.com"><i class="fa fa-google-plus"></i></a>
-                                <a href="https://www.pinterest.com"><i class="fa fa-pinterest"></i></a>
-                                <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
-                                <a href="https://www.x.com"><i class="fa fa-twitter"></i></a>
-                            </div>
-                            <br>
-                            <!-- medilife Emergency Card -->
-        <div class="medilife-emergency-card bg-img bg-overlay" style="background-image: url(img/bg-img/about1.jpg);">
-            <a href=tel:53345795332453> <i class="icon-smartphone"> </i> </a>
-            <a href="tel:53345795332453"> <h2>For Emergency calls</h2></a>
-            <a href="tel:53345795332453"> <h6> +53345795332453 </h3></a> 
+                                </script>
+    
+                                            <div class="contact-social-area">
+                                                <a href="https://www.google.com"><i class="fa fa-google-plus"></i></a>
+                                                <a href="https://www.pinterest.com"><i class="fa fa-pinterest"></i></a>
+                                                <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+                                                <a href="https://www.x.com"><i class="fa fa-twitter"></i></a>
+                                            </div>
+                                            <br>
+                                        
+
+                        <!-- medilife Emergency Card -->
+                        <div class="medilife-emergency-card bg-img bg-overlay" style="background-image: url(img/bg-img/about1.jpg);">
+                            <a href=tel:53345795332453> <i class="icon-smartphone"> </i> </a>
+                            <a href="tel:53345795332453"> <h2>For Emergency calls</h2></a>
+                            <a href="tel:53345795332453"> <h6> +53345795332453 </h3></a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-</div>
-</div>
-</section>
-</div>
-</div>
-</div>
-</div>
-</div>
+    </section>
+
+             
     <!-- Google Maps -->
     <div class="map-area mb-100">
         <div class="container">
