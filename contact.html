@@ -117,12 +117,12 @@
     <section class="medilife-contact-area section-padding-100">
         <div class="container">
             <div class="row">
-                <!-- Contact Form Area -->
-                <div class="col-12 col-lg-8">
+                 <!-- Contact Form Area -->
+                 <div class="col-12 col-lg-8">
                     <div class="contact-form">
                         <h5 class="mb-50">Get in Touch</h5>
                         <p class="mb-50">Fill up the form to get in touch with us. </p>
-
+        
                         <form action="#" method="post">
                             <div class="form-group">
                                 <input type="text" class="form-control" id="contact-name" placeholder="Name">
@@ -135,66 +135,105 @@
                             </div>
                             <button type="submit" class="btn medilife-btn">Send Message <span>+</span></button>
                         </form>
+        
+                        <!-- alert box -->
+                        <div id="customAlert" style="display:none; background-color: #f1f1f1; padding: 20px; margin-top: 20px; text-align: center;">
+                            <p>Success!</p>
+                            <button id="closeAlert">OK</button>
+                        </div>
+        
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function () {
+                                const button = document.querySelector(".btn.medilife-btn");
+                                const alertBox = document.getElementById("customAlert");
+                                const closeButton = document.getElementById("closeAlert");
+        
+                                // click button
+                                button.addEventListener("click", function (event) {
+                                    event.preventDefault(); // Varsayılan işlemi engelle
+                                    alertBox.style.display = "block"; // Alert kutusunu göster
+                                });
+        
+                                // close Alert
+                                closeButton.addEventListener("click", function () {
+                                    alertBox.style.display = "none"; // Alert kutusunu gizle
+                                });
+                            });
+                        </script>
                     </div>
                 </div>
-
+        
+                <!-- Sidebar Area -->
                 <div class="col-12 col-lg-4">
                     <div class="content-sidebar">
-
-
-                        <!-- Contact Card -->
                         <div class="medilife-contact-card mb-50">
-
                             <div class="single-contact d-flex align-items-center">
                                 <div class="contact-icon mr-30">
-                                    <i class="fa-solid fa-location-dot"></i>
+                                    <i class="icon-doctor"></i>
                                 </div>
                                 <div class="contact-meta">
-                                    <p>Address: 1481 Creekside Lane Avila <br>Beach, CA 93424 </p>
+                                    <p>Address:</p>
+                                    <a href="https://www.google.com/maps/place/%C3%96zel+Termessos+Hastanesi/@37.0351908,30.6035234,17z/data=!3m1!4b1!4m6!3m5!1s0x14c38bcc8f43f8e3:0x79a1b81e195cc224!8m2!3d37.0351908!4d30.6035234!16s%2Fg%2F11fxb85zjs?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D">
+                                        <p>Yeniköy, 106. Sk. No:11, 07190 Döşemealtı/Antalya </p>
+                                    </a>
                                 </div>
                             </div>
-
+        
                             <div class="single-contact d-flex align-items-center">
                                 <div class="contact-icon mr-30">
-                                    <i class="fa-solid fa-phone"></i>
+                                    <i class="icon-doctor"></i>
                                 </div>
                                 <div class="contact-meta">
-                                    <p>Phone: +53 345 7953 32453</p>
+                                    <p>Phone:</p>
+                                    <a href="tel:53345795332453"> +53 345 7953 32453</a>
                                 </div>
                             </div>
-
+        
                             <div class="single-contact d-flex align-items-center">
                                 <div class="contact-icon mr-30">
-                                    <i class="fa-solid fa-envelope"></i>
+                                    <i class="icon-doctor"></i>
                                 </div>
                                 <div class="contact-meta">
-                                    <p>Email: yourmail@gmail.com</p>
+                                    <p>Email:</p><a href="mailto:medilife@antalya.tr">medilife@antalya.tr</a>
                                 </div>
                             </div>
-
-
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function () {
+                                    const links = document.querySelectorAll(".medilife-contact-card .contact-meta a");
+                            
+                                    links.forEach(function (link) {
+                                        link.addEventListener("click", function () {
+                                            // Toggle the 'clicked' class to make the color change permanent
+                                            link.classList.add("clicked");
+                                        });
+                                    });
+                                });
+                            </script>
+                            
+                            
                             <div class="contact-social-area">
-                                <a href="#"><i class="fa-brands fa-google"></i></a> <!-- Google -->
-                                <a href="#"><i class="fa-brands fa-pinterest"></i></a> <!-- Pinterest -->
-                                <a href="#"><i class="fa-brands fa-facebook"></i></a> <!-- Facebook -->
-                                <a href="#"><i class="fa-brands fa-twitter"></i></a> <!-- Twitter -->
+                                <a href="https://www.google.com"><i class="fa fa-google-plus"></i></a>
+                                <a href="https://www.pinterest.com"><i class="fa fa-pinterest"></i></a>
+                                <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+                                <a href="https://www.x.com"><i class="fa fa-twitter"></i></a>
                             </div>
-
-                        </div>
-                        
-
-                        <!-- medilife Emergency Card -->
-                        <div class="medilife-emergency-card bg-img bg-overlay" style="background-image: url(img/bg-img/about1.jpg);">
-                            <i class="icon-smartphone"></i>
-                            <h2>For Emergency calls</h2>
-                            <h3>+12-823-611-8721</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                            <br>
+                            <!-- medilife Emergency Card -->
+        <div class="medilife-emergency-card bg-img bg-overlay" style="background-image: url(img/bg-img/about1.jpg);">
+            <a href=tel:53345795332453> <i class="icon-smartphone"> </i> </a>
+            <a href="tel:53345795332453"> <h2>For Emergency calls</h2></a>
+            <a href="tel:53345795332453"> <h6> +53345795332453 </h3></a> 
         </div>
-    </section>
-
+    </div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
     <!-- Google Maps -->
     <div class="map-area mb-100">
         <div class="container">
@@ -222,10 +261,10 @@
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer.</p>
                             <div class="footer-social-info">
-                                <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                <a href="https://www.google.com/"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                <a href="https://www.pinterest.com/"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                                <a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="https://www.x.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>
@@ -242,7 +281,7 @@
                                         <img src="img/blog-img/ln1.jpg" alt="">
                                     </div>
                                     <div class="widget-post-content">
-                                        <a href="#">Better Health Care</a>
+                                        <a href="blog.html">Better Health Care</a>
                                         <p>Dec 02, 2017</p>
                                     </div>
                                 </div>
@@ -252,7 +291,7 @@
                                         <img src="img/blog-img/ln2.jpg" alt="">
                                     </div>
                                     <div class="widget-post-content">
-                                        <a href="#">A new drug is tested</a>
+                                        <a href="blog.html">A new drug is tested</a>
                                         <p>Dec 02, 2017</p>
                                     </div>
                                 </div>
@@ -262,7 +301,7 @@
                                         <img src="img/blog-img/ln3.jpg" alt="">
                                     </div>
                                     <div class="widget-post-content">
-                                        <a href="#">Health department advice</a>
+                                        <a href="blog.html">Health department advice</a>
                                         <p>Dec 02, 2017</p>
                                     </div>
                                 </div>
@@ -316,10 +355,10 @@
                                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;
 <script>document.write(new Date().getFullYear());</script> 
-All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#" target="_blank">GroupZ</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 </p>
-<p>Re-distributed by <a href="https://themewagon.com/" target="_blank">Themewagon</a>
+<p>Re-distributed by <a href="#" target="_blank">GroupZ</a>
 </p>
                             </div>
                         </div>
