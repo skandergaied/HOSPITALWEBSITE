@@ -1806,7 +1806,6 @@ textarea {
       color: #ffffff; }
 
 /*# sourceMappingURL=style.css.map */
-
 #customAlert {
   display: none;
   position: fixed;
@@ -1959,3 +1958,60 @@ textarea {
   text-decoration: none;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .catagories-menu li {
+      display: block;
+  }
+}
+
+
+
+      h1 {
+        color: #007bff;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    p {
+        text-align: center;
+        color: #07121c;
+        margin-bottom: 2rem;
+    }
+
+
+    .feedback-section {
+      background-image: url('img/bg-img/360_F_92345.jpg');
+      background-size: cover; /* Ensures the image covers the section */
+      background-position: center; /* Centers the image */
+      background-repeat: no-repeat; /* Prevents the image from repeating */
+      margin: 0 auto 80px auto; /* Top and bottom margin, auto centers horizontally */
+      width: 80%; 
+      height: 400px; 
+  }
+
+
+ .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.medica-about-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.single-service-area {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+}
+
+.service-icon {
+    margin-right: 15px;
+}
+
+
+

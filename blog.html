@@ -15,6 +15,7 @@
     <link rel="icon" href="./img/core-img/doctor-svgrepo-com.svg">
     <!-- Style CSS -->
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 
@@ -25,37 +26,74 @@
     </div>
 
     <!-- ***** Header Area Start ***** -->
-    <head>
-        <div class="new">
-            <a class="navbar-brand" href="index.html">
-                <img src="img/core-img/logo.png" alt="Logo">
-            </a>
-            <ul class="navbar1">
-                <li><a href="index.html">HOME</a></li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" href="#" role="button">
-                        Pages
-                    </a> 
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="index.html">Home</a>
-                        <a class="dropdown-item" href="about-us.html">About Us</a>
-                        <a class="dropdown-item" href="services.html">Services</a>
-                        <a class="dropdown-item" href="blog.html">News</a>
-                        <a class="dropdown-item" href="single-blog.html">News Details</a>
-                        <a class="dropdown-item" href="contact.html">Contact</a>
-                        <a class="dropdown-item" href="elements.html">Elements</a>
-                        <a class="dropdown-item" href="index-icons.html">All Icons</a>
+    <div class="new">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <!-- Brand/Logo -->
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/core-img/logo.png" alt="Logo">
+                </a>
+                <!-- Mobile menu toggle button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" 
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" 
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
+                <!-- Offcanvas menu container -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" 
+                     aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" 
+                                aria-label="Close"></button>
                     </div>
-                </li>
-                <li><a href="about-us.html">ABOUT US</a></li>
-                <li><a href="services.html">SERVICES</a></li>
-                <li><a href="blog.html">NEWS</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-                <li><a href="hh.html" class="appointment-btn">Appointment</a></li>
-            </ul>
-        </div>
-     </head>
+                    <div class="offcanvas-body">
+                        <!-- Navigation links -->
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                            </li>
+                           
+                            <!-- Dropdown menu -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" 
+                                   data-bs-toggle="dropdown" aria-expanded="false">
+                                    Pages
+                                </a>
+                                <ul class="dropdown-menu">
+                                    
+                                    <li><a href="index.html" class="dropdown-item">Home</a></li>
+                                  <li><a href="about-us.html" class="dropdown-item">About Us</a></li>
+                                 <li><a href="services.html" class="dropdown-item">Services</a></li>
+                                  <li><a href="blog.html" class="dropdown-item">News</a></li>
+                                 <li><a href="contact.html" class="dropdown-item">Contact</a></li>
+                                </ul>
+                            </li>
+
+                            
+
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="about-us.html">About Us </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="services.html">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                            <!-- Appointment button -->
+                            <li class="nav-item">
+                                <a class="nav-link appointment-btn" href="appointment.html" >Make Appointment</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+        
     <!-- ***** Header Area End ***** -->
 
     <!-- ***** Breadcumb Area Start ***** -->
@@ -79,44 +117,52 @@
             <div class="row">
                 <div class="col-12 col-lg-8">
                     <div class="row">
-                        <!-- Single Blog Area -->
+                    <!------------------------- NEWS 1 ---------------------------->
+                         <!-- Single Blog Area -->
                         <div class="col-12 col-md-6">
-                            <div class="single-blog-area bg-gray mb-50" onclick="openAlertPopup()">
+                            <div class="single-blog-area bg-gray mb-50" onclick="openAlertPopup('alertPopup1')">
                                 <!-- Post Thumbnail -->
                                 <div class="blog-post-thumbnail">
-                                    <img src="img/blog-img/1.jpg" alt="">
+                                    <img src="img/blog-img/3.jpg" alt="">
                                     <!-- Post Date -->
                                     <div class="post-date">
-                                        <a href="#">Dec 15, 2024</a>
+                                        <a href="#">Jan 5, 2025</a>
                                     </div>
                                 </div>
                                 <!-- Post Content -->
                                 <div class="post-content">
                                     <div class="post-author">
-                                        <a href="#"><img src="img/blog-img/p1.jpg" alt=""></a>
+                                        <a href="#"><img src="img/blog-img/p3.jpg" alt=""></a>
                                     </div>
-                                    <a href="#" class="headline" id="postTitle">New drug release soon</a>
-                                    <p>A drug is a substance that has a physiological effect when ingested or otherwise introduced into the body.</p>
+                                    <a href="#" class="headline">Latest Medical Breakthrough</a>
+                                    <p>Scientists have announced a major breakthrough in medical research that promises to change healthcare.</p>
                                 </div>
                             </div>
                         </div>
                         
                         <!-- Popup Structure -->
-                        <div id="alertPopup" class="popup">
+                        <div id="alertPopup1" class="popup">
                             <div class="popup-content">
-                                <span class="close" onclick="closeAlertPopup()" style="font-size: 18px; font-weight: bold; cursor: pointer; position: absolute; top: 10px; right: 15px;">X</span>
-                                <h3>New Drug Release Soon</h3>
-                                <img src="img/blog-img/1.jpg" alt="Drug Image" style="width: 100%; margin-bottom: 15px;">
-                                <p><strong>What is a drug?</strong></p>
-                                <p>A drug is a substance that has a physiological effect when ingested or otherwise introduced into the body. Drugs can be used for medical purposes, such as treating or preventing diseases, or for recreational purposes, although they can also have harmful effects when misused.</p>
+                                <span class="close" onclick="closeAlertPopup('alertPopup1')">X</span>
+                                <h3>Latest Medical Breakthrough</h3>
+                                <img src="img/blog-img/3.jpg" alt="Medical Breakthrough Image" style="width: 100%; margin-bottom: 15px;">
+                                <p><strong>What's the news?</strong></p>
+                                <p>Scientists have announced a significant medical breakthrough that has the potential to revolutionize treatment options and improve healthcare outcomes worldwide.</p>
                                 <h4>Comments</h4>
-                                <textarea id="commentBox" rows="4" style="width: 100%; margin-bottom: 10px;" placeholder="Write your comment here..."></textarea>
-                                <button onclick="addCommentToList()">Submit</button>
-                                <ul id="commentList" style="margin-top: 10px; padding-left: 20px; max-height: 150px; overflow-y: auto;"></ul>
+                        
+                                <!-- Comment Form -->
+                                <form id="commentForm1">
+                                    <input id="userName1" type="text" placeholder="Enter your name" style="width: 100%; margin-bottom: 10px; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                                    <textarea id="userComment1" rows="4" style="width: 100%; margin-bottom: 10px; padding: 10px; border: 1px solid #ddd; border-radius: 5px;" placeholder="Enter your comment"></textarea>
+                                    <button type="submit" style="background-color: #28a745; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">Post Comment</button>
+                                </form>
+                        
+                                <!-- Comment List -->
+                                <div id="commentsList1" style="margin-top: 20px; padding-left: 0; max-height: 150px; overflow-y: auto; list-style-type: none; border-top: 1px solid #ddd; padding-top: 10px;"></div>
                             </div>
                         </div>
                         
-                        <!-- CSS for Popup -->
+                        
                         <style>
                             .popup {
                                 display: none;
@@ -152,37 +198,71 @@
                                 top: 10px;
                                 right: 15px;
                             }
+                        
+                            #commentsList1 .comment {
+                                margin-bottom: 10px;
+                                padding: 10px;
+                                background-color: #f9f9f9;
+                                border: 1px solid #ddd;
+                                border-radius: 5px;
+                                text-align: left;
+                            }
+                        
+                            #commentsList1 .comment strong {
+                                color: #333;
+                            }
                         </style>
                         
-                        <!-- JavaScript for Popup -->
+                        <!--  Popup and Comments -->
                         <script>
-                            function openAlertPopup() {
-                                document.getElementById("alertPopup").style.display = "flex";
+                            // Function to open the popup
+                            function openAlertPopup(popupId) {
+                                document.getElementById(popupId).style.display = "flex";
                             }
                         
-                            function closeAlertPopup() {
-                                document.getElementById("alertPopup").style.display = "none";
+                            // Function to close the popup
+                            function closeAlertPopup(popupId) {
+                                document.getElementById(popupId).style.display = "none";
                             }
                         
-                            function addCommentToList() {
-                                const commentBox = document.getElementById("commentBox");
-                                const commentList = document.getElementById("commentList");
-                                const commentText = commentBox.value.trim();
+                            // Submit Comment function
+                            function submitComment1(event) {
+                                event.preventDefault(); // Prevent form submission
                         
-                                if (commentText) {
-                                    const listItem = document.createElement("li");
-                                    listItem.textContent = commentText;
-                                    commentList.appendChild(listItem);
-                                    commentBox.value = ""; // Clear the textarea
-                                } else {
-                                    alert("Please write a comment before submitting.");
+                                // Get user inputs
+                                let userName = document.getElementById('userName1').value.trim();
+                                let userComment = document.getElementById('userComment1').value.trim();
+                        
+                                // Check if inputs are not empty
+                                if (!userName || !userComment) {
+                                    alert('Please enter both your name and comment.');
+                                    return;
                                 }
+                        
+                                // Create comment structure
+                                let commentElement = document.createElement('div');
+                                commentElement.classList.add('comment');
+                                commentElement.innerHTML = `<strong>${userName}:</strong><p>${userComment}</p>`;
+                        
+                                // Append to comment list
+                                document.getElementById('commentsList1').appendChild(commentElement);
+                        
+                                // Clear the form fields after submission
+                                document.getElementById('userName1').value = '';
+                                document.getElementById('userComment1').value = '';
                             }
+                        
+                            // Attach the submitComment function to form submission
+                            document.addEventListener("DOMContentLoaded", () => {
+                                const commentForm = document.getElementById("commentForm1");
+                                commentForm.addEventListener("submit", submitComment1);
+                            });
                         </script>
-
+                        
+            <!------------------------- NEWS 2 ---------------------------->
                         <!-- 2 Single Blog Area -->
                         <div class="col-12 col-md-6">
-                            <div class="single-blog-area bg-gray mb-50" onclick="openAlertPopup()">
+                            <div class="single-blog-area bg-gray mb-50" onclick="openAlertPopup('alertPopup2')">
                                 <!-- Post Thumbnail -->
                                 <div class="blog-post-thumbnail">
                                     <img src="img/blog-img/2.jpg" alt="">
@@ -196,31 +276,35 @@
                                     <div class="post-author">
                                         <a href="#"><img src="img/blog-img/p2.jpg" alt=""></a>
                                     </div>
-                                    <a href="#" class="headline" id="postTitle">Free dental care</a>
+                                    <a href="#" class="headline">Free Dental Care</a>
                                     <p>Dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
                                 </div>
                             </div>
                         </div>
                         
-                        
                         <!-- Popup Structure -->
-                        <div id="alertPopup" class="popup">
+                        <div id="alertPopup2" class="popup">
                             <div class="popup-content">
-                                <span class="close" onclick="closeAlertPopup()" style="font-size: 18px; font-weight: bold; cursor: pointer; position: absolute; top: 10px; right: 15px;">X</span>
+                                <span class="close" onclick="closeAlertPopup('alertPopup2')">X</span>
                                 <h3>Free Dental Care</h3>
                                 <img src="img/blog-img/2.jpg" alt="Dental Image" style="width: 100%; margin-bottom: 15px;">
                                 <p><strong>What is this about?</strong></p>
                                 <p>Dolor sit amet, consecte tuer adipiscing elit, sed diam nonummy nibh euismod tincidunt. Providing free dental care for those in need.</p>
                                 <h4>Comments</h4>
-                                <textarea id="commentBox" rows="4" style="width: 100%; margin-bottom: 10px;" placeholder="Write your comment here..."></textarea>
-                                <button onclick="addCommentToList()">Submit</button>
-                                <ul id="commentList" style="margin-top: 10px; padding-left: 20px; max-height: 150px; overflow-y: auto;"></ul>
-                                <button class="close" onclick="closeAlertPopup()"></button>
+                        
+                                <!-- Comment Input -->
+                                <form id="commentForm2">
+                                    <input id="userName2" type="text" placeholder="Enter your name" style="width: 100%; margin-bottom: 10px; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                                    <textarea id="userComment2" rows="4" style="width: 100%; margin-bottom: 10px; padding: 10px; border: 1px solid #ddd; border-radius: 5px;" placeholder="Enter your comment"></textarea>
+                                    <button type="submit" style="background-color: #28a745; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">Post Comment</button>
+                                </form>
+                        
+                                <!-- Comment List -->
+                                <div id="commentsList2" style="margin-top: 20px; padding-left: 0; max-height: 150px; overflow-y: auto; list-style-type: none; border-top: 1px solid #ddd; padding-top: 10px;"></div>
                             </div>
                         </div>
                         
-                        
-                        <!-- CSS for Popup -->
+                       
                         <style>
                             .popup {
                                 display: none;
@@ -256,37 +340,70 @@
                                 top: 10px;
                                 right: 15px;
                             }
+                        
+                            #commentsList2 .comment {
+                                margin-bottom: 10px;
+                                padding: 10px;
+                                background-color: #f9f9f9;
+                                border: 1px solid #ddd;
+                                border-radius: 5px;
+                                text-align: left;
+                            }
+                        
+                            #commentsList2 .comment strong {
+                                color: #333;
+                            }
                         </style>
                         
-                        <!-- JavaScript for Popup -->
+                        
                         <script>
-                            function openAlertPopup() {
-                                document.getElementById("alertPopup").style.display = "flex";
+                            // Popup open/close functions
+                            function openAlertPopup(popupId) {
+                                document.getElementById(popupId).style.display = "flex";
                             }
                         
-                            function closeAlertPopup() {
-                                document.getElementById("alertPopup").style.display = "none";
+                            function closeAlertPopup(popupId) {
+                                document.getElementById(popupId).style.display = "none";
                             }
                         
-                            function addCommentToList() {
-                                const commentBox = document.getElementById("commentBox");
-                                const commentList = document.getElementById("commentList");
-                                const commentText = commentBox.value.trim();
+                            // Submit Comment function
+                            function submitComment2(event) {
+                                event.preventDefault(); // Prevent form submission
                         
-                                if (commentText) {
-                                    const listItem = document.createElement("li");
-                                    listItem.textContent = commentText;
-                                    commentList.appendChild(listItem);
-                                    commentBox.value = ""; // Clear the textarea
-                                } else {
-                                    alert("Please write a comment before submitting.");
+                                // Get user inputs
+                                let userName = document.getElementById('userName2').value.trim();
+                                let userComment = document.getElementById('userComment2').value.trim();
+                        
+                                // Check if inputs are not empty
+                                if (!userName || !userComment) {
+                                    alert('Please enter both your name and comment.');
+                                    return;
                                 }
+                        
+                                // Create comment structure
+                                let commentElement = document.createElement('div');
+                                commentElement.classList.add('comment');
+                                commentElement.innerHTML = `<strong>${userName}:</strong><p>${userComment}</p>`;
+                        
+                                // Append to comment list
+                                document.getElementById('commentsList2').appendChild(commentElement);
+                        
+                                // Clear the form fields after submission
+                                document.getElementById('userName2').value = '';
+                                document.getElementById('userComment2').value = '';
                             }
+                        
+                            // Attach the submitComment function to form submission
+                            document.addEventListener("DOMContentLoaded", () => {
+                                const commentForm = document.getElementById("commentForm2");
+                                commentForm.addEventListener("submit", submitComment2);
+                            });
                         </script>
-
-                        <!-- 3  Single Blog Area -->
+                        
+             <!------------------------- NEWS 3 ---------------------------->
+                 <!-- 3 Single Blog Area -->
                         <div class="col-12 col-md-6">
-                            <div class="single-blog-area bg-gray mb-50" onclick="openAlertPopup()">
+                            <div class="single-blog-area bg-gray mb-50" onclick="openAlertPopup('alertPopup3')">
                                 <!-- Post Thumbnail -->
                                 <div class="blog-post-thumbnail">
                                     <img src="img/blog-img/coffee.jpg" alt="">
@@ -301,30 +418,34 @@
                                         <a href="#"><img src="img/blog-img/p3.jpg" alt=""></a>
                                     </div>
                                     <a href="#" class="headline" id="postTitle">Is coffee good for your heart health? 3 studies offer insights</a>
-                                    <p>How does caffeine affect heart health? The latest research offers new insights. </p>
+                                    <p>How does caffeine affect heart health? The latest research offers new insights.</p>
                                 </div>
                             </div>
                         </div>
                         
                         <!-- Popup Structure -->
-                        <div id="alertPopup" class="popup">
+                        <div id="alertPopup3" class="popup">
                             <div class="popup-content">
-                                <span class="close" onclick="closeAlertPopup()" style="font-size: 18px; font-weight: bold; cursor: pointer; position: absolute; top: 10px; right: 15px;">X</span>
+                                <span class="close" onclick="closeAlertPopup('alertPopup3')">X</span>
                                 <h3>Good news for the patients</h3>
                                 <img src="img/blog-img/coffee.jpg" alt="Blog Image" style="width: 100%; margin-bottom: 15px;">
                                 <p><strong>What is this about?</strong></p>
-                                <p>Studies on caffeine’s effects on heart health have gained interest in recent years. One crucial question remains: How much caffeine is too much?
-                                    In this roundup of the latest studies exploring the effects of caffeine on cardiovascular health, Medical News Today compiles the most recent evidence to highlight key findings and takeaways.
-                                    Some studies suggest that consuming caffeine may help boost vascular health and lower the risk of type 2 diabetes, while others indicate that consuming too much may increase the risk of stroke</p>
+                                <p>Studies on caffeine’s effects on heart health have gained interest in recent years. One crucial question remains: How much caffeine is too much? In this roundup of the latest studies exploring the effects of caffeine on cardiovascular health, Medical News Today compiles the most recent evidence to highlight key findings and takeaways. Some studies suggest that consuming caffeine may help boost vascular health and lower the risk of type 2 diabetes, while others indicate that consuming too much may increase the risk of stroke.</p>
                                 <h4>Comments</h4>
-                                <textarea id="commentBox" rows="4" style="width: 100%; margin-bottom: 10px;" placeholder="Write your comment here..."></textarea>
-                                <button onclick="addCommentToList()">Submit</button>
-                                <ul id="commentList" style="margin-top: 10px; padding-left: 20px; max-height: 150px; overflow-y: auto;"></ul>
-                                <button class="close" onclick="closeAlertPopup()"></button>
+                        
+                                <!-- Comment Input -->
+                                <form id="commentForm3">
+                                    <input id="userName3" type="text" placeholder="Enter your name" style="width: 100%; margin-bottom: 10px; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                                    <textarea id="userComment3" rows="4" style="width: 100%; margin-bottom: 10px; padding: 10px; border: 1px solid #ddd; border-radius: 5px;" placeholder="Enter your comment"></textarea>
+                                    <button type="submit" style="background-color: #28a745; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">Post Comment</button>
+                                </form>
+                        
+                                <!-- Comment List -->
+                                <div id="commentsList3" style="margin-top: 20px; padding-left: 0; max-height: 150px; overflow-y: auto; list-style-type: none; border-top: 1px solid #ddd; padding-top: 10px;"></div>
                             </div>
                         </div>
                         
-                        <!-- CSS for Popup -->
+                        
                         <style>
                             .popup {
                                 display: none;
@@ -360,37 +481,70 @@
                                 top: 10px;
                                 right: 15px;
                             }
+                        
+                            #commentsList3 .comment {
+                                margin-bottom: 10px;
+                                padding: 10px;
+                                background-color: #f9f9f9;
+                                border: 1px solid #ddd;
+                                border-radius: 5px;
+                                text-align: left;
+                            }
+                        
+                            #commentsList3 .comment strong {
+                                color: #333;
+                            }
                         </style>
                         
-                        <!-- JavaScript for Popup -->
+                        
                         <script>
-                            function openAlertPopup() {
-                                document.getElementById("alertPopup").style.display = "flex";
+                            // Popup açma/kapatma fonksiyonları
+                            function openAlertPopup(popupId) {
+                                document.getElementById(popupId).style.display = "flex";
                             }
                         
-                            function closeAlertPopup() {
-                                document.getElementById("alertPopup").style.display = "none";
+                            function closeAlertPopup(popupId) {
+                                document.getElementById(popupId).style.display = "none";
                             }
                         
-                            function addCommentToList() {
-                                const commentBox = document.getElementById("commentBox");
-                                const commentList = document.getElementById("commentList");
-                                const commentText = commentBox.value.trim();
+                            // Submit Comment function
+                            function submitComment(event) {
+                                event.preventDefault(); // Prevent form submission
                         
-                                if (commentText) {
-                                    const listItem = document.createElement("li");
-                                    listItem.textContent = commentText;
-                                    commentList.appendChild(listItem);
-                                    commentBox.value = ""; // Clear the textarea
-                                } else {
-                                    alert("Please write a comment before submitting.");
+                                // Get user inputs
+                                let userName = document.getElementById('userName3').value.trim();
+                                let userComment = document.getElementById('userComment3').value.trim();
+                        
+                                // Check if inputs are not empty
+                                if (!userName || !userComment) {
+                                    alert('Please enter both your name and comment.');
+                                    return;
                                 }
+                        
+                                // Create comment structure
+                                let commentElement = document.createElement('div');
+                                commentElement.classList.add('comment');
+                                commentElement.innerHTML = `<strong>${userName}:</strong><p>${userComment}</p>`;
+                        
+                                // Append to comment list
+                                document.getElementById('commentsList3').appendChild(commentElement);
+                        
+                                // Clear the form fields after submission
+                                document.getElementById('userName3').value = '';
+                                document.getElementById('userComment3').value = '';
                             }
+                        
+                            // Attach the submitComment function to form submission
+                            document.addEventListener("DOMContentLoaded", () => {
+                                const commentForm = document.getElementById("commentForm3");
+                                commentForm.addEventListener("submit", submitComment);
+                            });
                         </script>
+                 <!------------------------- NEWS 4 ---------------------------->
 
                         <!-- 4 Single Blog Area -->
                         <div class="col-12 col-md-6">
-                            <div class="single-blog-area bg-gray mb-50" onclick="openAlertPopup()">
+                            <div class="single-blog-area bg-gray mb-50" onclick="openAlertPopup('alertPopup4')">
                                 <!-- Post Thumbnail -->
                                 <div class="blog-post-thumbnail">
                                     <img src="img/blog-img/plants.jpg" alt="">
@@ -404,31 +558,35 @@
                                     <div class="post-author">
                                         <a href="#"><img src="img/blog-img/p1.jpg" alt=""></a>
                                     </div>
-                                    <a href="#" class="headline" id="postTitle">Diet rich in whole plant foods and fish may keep colon cancer at bay</a>
+                                    <a href="#" class="headline">Diet rich in whole plant foods and fish may keep colon cancer at bay</a>
                                     <p>Our dietary choices may impact our risk of gastrointestinal cancers, including colorectal cancer.</p>
                                 </div>
                             </div>
                         </div>
                         
                         <!-- Popup Structure -->
-                        <div id="alertPopup" class="popup">
+                        <div id="alertPopup4" class="popup">
                             <div class="popup-content">
-                                <span class="close" onclick="closeAlertPopup()" style="font-size: 18px; font-weight: bold; cursor: pointer; position: absolute; top: 10px; right: 15px;">X</span>
-                                <h3>New drug release soon</h3>
+                                <span class="close" onclick="closeAlertPopup('alertPopup4')">X</span>
+                                <h3>Diet Rich in Whole Plant Foods</h3>
                                 <img src="img/blog-img/plants.jpg" alt="Blog Image" style="width: 100%; margin-bottom: 15px;">
                                 <p><strong>What is this about?</strong></p>
-                                <p>With bowel cancer diagnoses rising among people under 50, researchers are urging the public to increase fibre intake and adopt healthier eating habits to reduce the risk of gastrointestinal cancers.
-                                    Studies from Flinders University reveal that diets rich in fruits, vegetables, whole grains and healthy fats, while limiting sugar and alcohol, may significantly lower cancer risk and improve outcomes.
-                                    However, researchers point out that further clinical trials are needed to better understand how dietary patterns influence cancer development and to expand education on nutrition as a preventive measure..</p>
+                                <p>With bowel cancer diagnoses rising among people under 50, researchers are urging the public to increase fibre intake and adopt healthier eating habits to reduce the risk of gastrointestinal cancers. Studies from Flinders University reveal that diets rich in fruits, vegetables, whole grains, and healthy fats, while limiting sugar and alcohol, may significantly lower cancer risk and improve outcomes. However, researchers point out that further clinical trials are needed to better understand how dietary patterns influence cancer development.</p>
                                 <h4>Comments</h4>
-                                <textarea id="commentBox" rows="4" style="width: 100%; margin-bottom: 10px;" placeholder="Write your comment here..."></textarea>
-                                <button onclick="addCommentToList()">Submit</button>
-                                <ul id="commentList" style="margin-top: 10px; padding-left: 20px; max-height: 150px; overflow-y: auto;"></ul>
-                                <button class="close" onclick="closeAlertPopup()"></button>
+                                
+                                <!-- Comment Input -->
+                                <form id="commentForm4">
+                                    <input id="userName4" type="text" placeholder="Enter your name" style="width: 100%; margin-bottom: 10px; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                                    <textarea id="userComment4" rows="4" style="width: 100%; margin-bottom: 10px; padding: 10px; border: 1px solid #ddd; border-radius: 5px;" placeholder="Enter your comment"></textarea>
+                                    <button type="submit" style="background-color: #28a745; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">Post Comment</button>
+                                </form>
+                        
+                                <!-- Comment List -->
+                                <div id="commentsList4" style="margin-top: 20px; padding-left: 0; max-height: 150px; overflow-y: auto; list-style-type: none; border-top: 1px solid #ddd; padding-top: 10px;"></div>
                             </div>
                         </div>
                         
-                        <!-- CSS for Popup -->
+                       
                         <style>
                             .popup {
                                 display: none;
@@ -464,37 +622,71 @@
                                 top: 10px;
                                 right: 15px;
                             }
+                        
+                            #commentsList4 .comment {
+                                margin-bottom: 10px;
+                                padding: 10px;
+                                background-color: #f9f9f9;
+                                border: 1px solid #ddd;
+                                border-radius: 5px;
+                                text-align: left;
+                            }
+                        
+                            #commentsList4 .comment strong {
+                                color: #333;
+                            }
                         </style>
                         
-                        <!-- JavaScript for Popup -->
+                       
                         <script>
-                            function openAlertPopup() {
-                                document.getElementById("alertPopup").style.display = "flex";
+                            // Open popup function
+                            function openAlertPopup(popupId) {
+                                document.getElementById(popupId).style.display = "flex";
                             }
                         
-                            function closeAlertPopup() {
-                                document.getElementById("alertPopup").style.display = "none";
+                            // Close popup function
+                            function closeAlertPopup(popupId) {
+                                document.getElementById(popupId).style.display = "none";
                             }
                         
-                            function addCommentToList() {
-                                const commentBox = document.getElementById("commentBox");
-                                const commentList = document.getElementById("commentList");
-                                const commentText = commentBox.value.trim();
+                            // Submit Comment function
+                            function submitComment4(event) {
+                                event.preventDefault(); // Prevent form submission
                         
-                                if (commentText) {
-                                    const listItem = document.createElement("li");
-                                    listItem.textContent = commentText;
-                                    commentList.appendChild(listItem);
-                                    commentBox.value = ""; // Clear the textarea
-                                } else {
-                                    alert("Please write a comment before submitting.");
+                                // Get user inputs
+                                let userName = document.getElementById('userName4').value.trim();
+                                let userComment = document.getElementById('userComment4').value.trim();
+                        
+                                // Check if inputs are not empty
+                                if (!userName || !userComment) {
+                                    alert('Please enter both your name and comment.');
+                                    return;
                                 }
+                        
+                                // Create comment structure
+                                let commentElement = document.createElement('div');
+                                commentElement.classList.add('comment');
+                                commentElement.innerHTML = `<strong>${userName}:</strong><p>${userComment}</p>`;
+                        
+                                // Append to comment list
+                                document.getElementById('commentsList4').appendChild(commentElement);
+                        
+                                // Clear the form fields after submission
+                                document.getElementById('userName4').value = '';
+                                document.getElementById('userComment4').value = '';
                             }
+                        
+                            // Attach the submitComment function to form submission
+                            document.addEventListener("DOMContentLoaded", () => {
+                                const commentForm = document.getElementById("commentForm4");
+                                commentForm.addEventListener("submit", submitComment4);
+                            });
                         </script>
-
-                        <!-- 5 Single Blog Area -->
+                        
+                <!------------------------- NEWS 5 ---------------------------->
+                         <!-- 5 Single Blog Area -->
                         <div class="col-12 col-md-6">
-                            <div class="single-blog-area bg-gray mb-50" onclick="openAlertPopup()">
+                            <div class="single-blog-area bg-gray mb-50" onclick="openAlertPopup('alertPopup5')">
                                 <!-- Post Thumbnail -->
                                 <div class="blog-post-thumbnail">
                                     <img src="img/blog-img/protein.jpg" alt="">
@@ -508,31 +700,36 @@
                                     <div class="post-author">
                                         <a href="#"><img src="img/blog-img/p2.jpg" alt=""></a>
                                     </div>
-                                    <a href="#" class="headline" id="postTitle">Eating more plant protein may lower the risk of heart disease as much as 27%</a>
+                                    <a href="#" class="headline">Eating more plant protein may lower the risk of heart disease as much as 27%</a>
                                     <p>A new study links consuming more plant-based protein to a lower risk of heart disease.</p>
                                 </div>
                             </div>
                         </div>
                         
                         <!-- Popup Structure -->
-                        <div id="alertPopup" class="popup">
+                        <div id="alertPopup5" class="popup">
                             <div class="popup-content">
-                                <span class="close" onclick="closeAlertPopup()" style="font-size: 18px; font-weight: bold; cursor: pointer; position: absolute; top: 10px; right: 15px;">X</span>
-                                <h3>Free dental care</h3>
-                                <img src="img/blog-img/protein.jpg" alt="Blog Image" style="width: 100%; margin-bottom: 15px;">
+                                <span class="close" onclick="closeAlertPopup('alertPopup5')">X</span>
+                                <h3>Eating More Plant Protein</h3>
+                                <img src="img/blog-img/protein.jpg" alt="Plant Protein Image" style="width: 100%; margin-bottom: 15px;">
                                 <p><strong>What is this about?</strong></p>
                                 <p>A recent study examined the potential effects that consuming different forms of protein may have on heart health.
-                                    The researchers were interested in the ratio of plant vs. animal-based protein people consumed and their long-term health outcomes.
-                                    The researchers learned that consuming a higher ratio of plant to animal protein could lead to a reduction of both coronary heart disease (CHD) and cardiovascular disease (CVD).</p>
+                                    The researchers found that consuming a higher ratio of plant-based protein to animal protein could reduce the risk of coronary heart disease (CHD) and cardiovascular disease (CVD).</p>
                                 <h4>Comments</h4>
-                                <textarea id="commentBox" rows="4" style="width: 100%; margin-bottom: 10px;" placeholder="Write your comment here..."></textarea>
-                                <button onclick="addCommentToList()">Submit</button>
-                                <ul id="commentList" style="margin-top: 10px; padding-left: 20px; max-height: 150px; overflow-y: auto;"></ul>
-                                <button class="close" onclick="closeAlertPopup()"></button>
+                        
+                                <!-- Comment Input -->
+                                <form id="commentForm5">
+                                    <input id="userName5" type="text" placeholder="Enter your name" style="width: 100%; margin-bottom: 10px; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                                    <textarea id="userComment5" rows="4" style="width: 100%; margin-bottom: 10px; padding: 10px; border: 1px solid #ddd; border-radius: 5px;" placeholder="Enter your comment"></textarea>
+                                    <button type="submit" style="background-color: #28a745; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">Post Comment</button>
+                                </form>
+                        
+                                <!-- Comment List -->
+                                <div id="commentsList5" style="margin-top: 20px; padding-left: 0; max-height: 150px; overflow-y: auto; list-style-type: none; border-top: 1px solid #ddd; padding-top: 10px;"></div>
                             </div>
                         </div>
                         
-                        <!-- CSS for Popup -->
+                        
                         <style>
                             .popup {
                                 display: none;
@@ -568,37 +765,71 @@
                                 top: 10px;
                                 right: 15px;
                             }
+                        
+                            #commentsList5 .comment {
+                                margin-bottom: 10px;
+                                padding: 10px;
+                                background-color: #f9f9f9;
+                                border: 1px solid #ddd;
+                                border-radius: 5px;
+                                text-align: left;
+                            }
+                        
+                            #commentsList5 .comment strong {
+                                color: #333;
+                            }
                         </style>
                         
-                        <!-- JavaScript for Popup -->
+                        <!-- Popup and Comments -->
                         <script>
-                            function openAlertPopup() {
-                                document.getElementById("alertPopup").style.display = "flex";
+                            // Function to open the popup
+                            function openAlertPopup(popupId) {
+                                document.getElementById(popupId).style.display = "flex";
                             }
                         
-                            function closeAlertPopup() {
-                                document.getElementById("alertPopup").style.display = "none";
+                            // Function to close the popup
+                            function closeAlertPopup(popupId) {
+                                document.getElementById(popupId).style.display = "none";
                             }
                         
-                            function addCommentToList() {
-                                const commentBox = document.getElementById("commentBox");
-                                const commentList = document.getElementById("commentList");
-                                const commentText = commentBox.value.trim();
+                            // Function to handle comment submission
+                            function submitComment5(event) {
+                                event.preventDefault(); // Prevent form submission
                         
-                                if (commentText) {
-                                    const listItem = document.createElement("li");
-                                    listItem.textContent = commentText;
-                                    commentList.appendChild(listItem);
-                                    commentBox.value = ""; // Clear the textarea
-                                } else {
-                                    alert("Please write a comment before submitting.");
+                                // Get user inputs
+                                let userName = document.getElementById('userName5').value.trim();
+                                let userComment = document.getElementById('userComment5').value.trim();
+                        
+                                // Check if inputs are not empty
+                                if (!userName || !userComment) {
+                                    alert('Please enter both your name and comment.');
+                                    return;
                                 }
+                        
+                                // Create comment structure
+                                let commentElement = document.createElement('div');
+                                commentElement.classList.add('comment');
+                                commentElement.innerHTML = `<strong>${userName}:</strong><p>${userComment}</p>`;
+                        
+                                // Append to comment list
+                                document.getElementById('commentsList5').appendChild(commentElement);
+                        
+                                // Clear the form fields after submission
+                                document.getElementById('userName5').value = '';
+                                document.getElementById('userComment5').value = '';
                             }
+                        
+                            // Attach the submitComment5 function to form submission
+                            document.addEventListener("DOMContentLoaded", () => {
+                                const commentForm5 = document.getElementById("commentForm5");
+                                commentForm5.addEventListener("submit", submitComment5);
+                            });
                         </script>
-
-                        <!-- 6 Single Blog Area -->
+                        <!--  ----------------- NEWS 6 ---------------------------------- -->
+                        
+                    <!-- 6 Single Blog Area -->
                         <div class="col-12 col-md-6">
-                            <div class="single-blog-area bg-gray mb-50" onclick="openAlertPopup()">
+                            <div class="single-blog-area bg-gray mb-50" onclick="openAlertPopup('alertPopup6')">
                                 <!-- Post Thumbnail -->
                                 <div class="blog-post-thumbnail">
                                     <img src="img/blog-img/walk.jpg" alt="">
@@ -612,31 +843,36 @@
                                     <div class="post-author">
                                         <a href="#"><img src="img/blog-img/p3.jpg" alt=""></a>
                                     </div>
-                                    <a href="#" class="headline" id="postTitle">Daily walk may prolong lifespan</a>
+                                    <a href="#" class="headline">Daily walk may prolong lifespan</a>
                                     <p>Taking a walk every day could add years to your life, a new study suggests.</p>
                                 </div>
                             </div>
                         </div>
                         
                         <!-- Popup Structure -->
-                        <div id="alertPopup" class="popup">
+                        <div id="alertPopup6" class="popup">
                             <div class="popup-content">
-                                <span class="close" onclick="closeAlertPopup()" style="font-size: 18px; font-weight: bold; cursor: pointer; position: absolute; top: 10px; right: 15px;">X</span>
-                                <h3>Good news for the patients</h3>
-                                <img src="img/blog-img/walk.jpg" alt="Blog Image" style="width: 100%; margin-bottom: 15px;">
+                                <span class="close" onclick="closeAlertPopup('alertPopup6')">X</span>
+                                <h3>Daily Walk May Prolong Lifespan</h3>
+                                <img src="img/blog-img/walk.jpg" alt="Walk Image" style="width: 100%; margin-bottom: 15px;">
                                 <p><strong>What is this about?</strong></p>
-                                <p>If Americans over 40 walked as much each day as the most physically active members of the population, they could extend their life span by at least five years, a new study finds.
-                                    The least physically active 25% of the population stood the most to gain, according to the predictive model: For each hour of walking they do, they can extend their life by about 6 hours.
-                                    While the study may have limitations since it was based on existing data from certain portions of the American population, the findings do line up with known health benefits of physical activity, experts say.</p>
+                                <p>If Americans over 40 walked as much each day as the most physically active members of the population, they could extend their lifespan by at least five years. The least physically active 25% of the population stood the most to gain: For each hour of walking, they can extend their life by about 6 hours.</p>
+                                
                                 <h4>Comments</h4>
-                                <textarea id="commentBox" rows="4" style="width: 100%; margin-bottom: 10px;" placeholder="Write your comment here..."></textarea>
-                                <button onclick="addCommentToList()">Submit</button>
-                                <ul id="commentList" style="margin-top: 10px; padding-left: 20px; max-height: 150px; overflow-y: auto;"></ul>
-                                <button class="close" onclick="closeAlertPopup()"></button>
+                        
+                                <!-- Comment Input -->
+                                <form id="commentForm6">
+                                    <input id="userName6" type="text" placeholder="Enter your name" style="width: 100%; margin-bottom: 10px; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                                    <textarea id="userComment6" rows="4" style="width: 100%; margin-bottom: 10px; padding: 10px; border: 1px solid #ddd; border-radius: 5px;" placeholder="Enter your comment"></textarea>
+                                    <button type="submit" style="background-color: #28a745; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">Post Comment</button>
+                                </form>
+                        
+                                <!-- Comment List -->
+                                <div id="commentsList6" style="margin-top: 20px; padding-left: 0; max-height: 150px; overflow-y: auto; list-style-type: none; border-top: 1px solid #ddd; padding-top: 10px;">
+                                </div>
                             </div>
                         </div>
-                        
-                        <!-- CSS for Popup -->
+                       
                         <style>
                             .popup {
                                 display: none;
@@ -672,96 +908,338 @@
                                 top: 10px;
                                 right: 15px;
                             }
+                        
+                            #commentsList6 {
+                                margin-top: 20px;
+                                padding-left: 0;
+                                max-height: 150px;
+                                overflow-y: auto;
+                                list-style-type: none;
+                                border-top: 1px solid #ddd;
+                                padding-top: 10px;
+                                text-align: left;
+                            }
+                        
+                            #commentsList6 .comment {
+                                margin-bottom: 10px;
+                                padding: 10px;
+                                background-color: #f9f9f9;
+                                border: 1px solid #ddd;
+                                border-radius: 5px;
+                                text-align: left;
+                            }
+                        
+                            #commentsList6 .comment strong {
+                                color: #333;
+                            }
                         </style>
                         
-                        <!-- JavaScript for Popup -->
                         <script>
-                            function openAlertPopup() {
-                                document.getElementById("alertPopup").style.display = "flex";
+                            function openAlertPopup(popupId) {
+                                document.getElementById(popupId).style.display = "flex";
                             }
                         
-                            function closeAlertPopup() {
-                                document.getElementById("alertPopup").style.display = "none";
+                            function closeAlertPopup(popupId) {
+                                document.getElementById(popupId).style.display = "none";
                             }
                         
-                            function addCommentToList() {
-                                const commentBox = document.getElementById("commentBox");
-                                const commentList = document.getElementById("commentList");
-                                const commentText = commentBox.value.trim();
+                            function submitComment6(event) {
+                                event.preventDefault(); // Prevent form submission
                         
-                                if (commentText) {
-                                    const listItem = document.createElement("li");
-                                    listItem.textContent = commentText;
-                                    commentList.appendChild(listItem);
-                                    commentBox.value = ""; // Clear the textarea
-                                } else {
-                                    alert("Please write a comment before submitting.");
+                                // Get user inputs
+                                let userName = document.getElementById('userName6').value.trim();
+                                let userComment = document.getElementById('userComment6').value.trim();
+                        
+                                // Check if inputs are not empty
+                                if (!userName || !userComment) {
+                                    alert('Please enter both your name and comment.');
+                                    return;
                                 }
+                        
+                                // Create comment structure
+                                let commentElement = document.createElement('div');
+                                commentElement.classList.add('comment');
+                                commentElement.innerHTML = `<strong>${userName}:</strong><p>${userComment}</p>`;
+                        
+                                // Append to comment list
+                                document.getElementById('commentsList6').appendChild(commentElement);
+                        
+                                // Clear the form fields after submission
+                                document.getElementById('userName6').value = '';
+                                document.getElementById('userComment6').value = '';
                             }
+                        
+                            // Attach the submitComment function to form submission
+                            document.addEventListener("DOMContentLoaded", () => {
+                                const commentForm = document.getElementById("commentForm6");
+                                commentForm.addEventListener("submit", submitComment6);
+                            });
                         </script>
-                    </div>
-                </div>
-
-                <div class="col-12 col-lg-4">
-                    <div class="medilife-blog-sidebar-area">
-
-                        <!-- Search Widget -->
-                        <div class="search-widget-area mb-50">
-                            <form action="#" method="get">
-                                <input type="search" placeholder="Type Any Keywords">
-                                <input type="submit" value="Search">
-                            </form>
-                        </div>
-
-                        <!-- Catagories Widget -->
-                        <div class="medilife-catagories-card mb-50">
-                            <h5>Categories</h5>
-                            <ul class="catagories-menu">
-                                <li><a href="#">Radiology</a></li>
-                                <li><a href="#">Cardiology</a></li>
-                                <li><a href="#">Gastroenterology</a></li>
-                                <li><a href="#">Neurology</a></li>
-                                <li><a href="#">General surgery</a></li>
-                            </ul>
-                        </div>
-
-                        <!-- Latest News -->
-                        <div class="latest-news-widget-area mb-50">
-                            <h5>Latest News</h5>
-                            <div class="widget-blog-post">
-                                <!-- Single Blog Post -->
-                                <div class="widget-single-blog-post d-flex align-items-center">
-                                    <div class="widget-post-thumbnail pr-3">
-                                        <img src="img/blog-img/ln1.jpg" alt="">
-                                    </div>
-                                    <div class="widget-post-content">
-                                        <a href="#">A big discovery for medicine</a>
-                                        <p>Dec 02, 2017</p>
-                                    </div>
-                                </div>
-                                <!-- Single Blog Post -->
-                                <div class="widget-single-blog-post d-flex align-items-center">
-                                    <div class="widget-post-thumbnail pr-3">
-                                        <img src="img/blog-img/ln2.jpg" alt="">
-                                    </div>
-                                    <div class="widget-post-content">
-                                        <a href="#">Dentistry for everybody</a>
-                                        <p>Dec 02, 2017</p>
-                                    </div>
-                                </div>
-                                <!-- Single Blog Post -->
-                                <div class="widget-single-blog-post d-flex align-items-center">
-                                    <div class="widget-post-thumbnail pr-3">
-                                        <img src="img/blog-img/ln3.jpg" alt="">
-                                    </div>
-                                    <div class="widget-post-content">
-                                        <a href="#">When it’s time to take pills</a>
-                                        <p>Dec 02, 2017</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                        
+                                            </div>
+                                        </div>
+                        
+                                        <div class="col-12 col-lg-4">
+                                            <div class="medilife-blog-sidebar-area">
+                    
+                                               <!-- Search Widget -->
+                                                <div class="search-widget-area mb-50">
+                                                    <form action="#" method="get">
+                                                        <input type="search" placeholder="Type Any Keywords">
+                                                        <input type="submit" value="Search">
+                                                    </form>
+                                                </div>                    
+                                                <!-- Categories Widget -->
+                                                        <style>
+                                                            
+                                                            .category-widget {
+                                                                margin-bottom: 50px;
+                                                            }
+                                                        
+                                                            .category-widget h5 {
+                                                                font-size: 20px;
+                                                                margin-bottom: 15px;
+                                                            }
+                                                        
+                                                            .category-list {
+                                                                list-style: none;
+                                                                padding: 0;
+                                                            }
+                                                        
+                                                            .category-item a {
+                                                                text-decoration: none;
+                                                                color: #333;
+                                                                display: flex;
+                                                                align-items: center;
+                                                                padding: 8px 0;
+                                                                transition: color 0.3s;
+                                                            }
+                                                        
+                                                            .category-icon {
+                                                                width: 20px;
+                                                                height: 20px;
+                                                                margin-right: 10px;
+                                                                background-color: #007BFF;
+                                                                border-radius: 50%;
+                                                                display: inline-block;
+                                                                text-align: center;
+                                                                font-size: 14px;
+                                                                line-height: 20px;
+                                                            }
+                                                        
+                                                            .category-item a:hover {
+                                                                color: #007BFF;
+                                                            }
+                                                        
+                                                            /* Modal styles */
+                                                            .category-modal {
+                                                                display: none;
+                                                                position: fixed;
+                                                                z-index: 1;
+                                                                left: 0;
+                                                                top: 0;
+                                                                width: 100%;
+                                                                height: 100%;
+                                                                background-color: rgba(0, 0, 0, 0.5);
+                                                            }
+                                                        
+                                                            .category-modal-content {
+                                                                background-color: #fff;
+                                                                padding: 20px;
+                                                                border-radius: 5px;
+                                                                width: 50%;
+                                                                margin: 10% auto;
+                                                                position: relative;
+                                                            }
+                                                        
+                                                            .category-modal-content h2 {
+                                                                margin-top: 0;
+                                                            }
+                                                        
+                                                            /* Close Button Styles */
+                                                            .close-btn {
+                                                                color: #aaa;
+                                                                font-size: 28px;
+                                                                font-weight: bold;
+                                                                position: absolute;
+                                                                top: 10px;
+                                                                right: 25px;
+                                                                cursor: pointer;
+                                                            }
+                                                        
+                                                            .close-btn:hover,
+                                                            .close-btn:focus {
+                                                                color: black;
+                                                                text-decoration: none;
+                                                                cursor: pointer;
+                                                            }
+                                                        
+                                                            #categoryLink {
+                                                                color: #007BFF;
+                                                                text-decoration: none;
+                                                            }
+                                                        
+                                                            #categoryLink:hover {
+                                                                text-decoration: underline;
+                                                            }
+                                                        </style>
+                                                        
+                                                        <body>
+                                                            <!-- Categories Widget -->
+                                                            <div class="category-widget">
+                                                                <h5>Categories</h5>
+                                                                <ul class="category-list">
+                                                                    <li class="category-item"><a href="#" onclick="showCategoryInfo('radiology')"><span class="category-icon">📸</span> Radiology</a></li>
+                                                                    <li class="category-item"><a href="#" onclick="showCategoryInfo('cardiology')"><span class="category-icon">❤️</span> Cardiology</a></li>
+                                                                    <li class="category-item"><a href="#" onclick="showCategoryInfo('gastroenterology')"><span class="category-icon">🍽️</span> Gastroenterology</a></li>
+                                                                    <li class="category-item"><a href="#" onclick="showCategoryInfo('neurology')"><span class="category-icon">🧠</span> Neurology</a></li>
+                                                                    <li class="category-item"><a href="#" onclick="showCategoryInfo('surgery')"><span class="category-icon">🛠️</span> General Surgery</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        
+                                                            <!-- Modal for Category Info -->
+                                                            <div id="categoryModal" class="category-modal">
+                                                                <div class="category-modal-content">
+                                                                    <span class="close-btn" onclick="closeCategoryModal()">&times;</span>
+                                                                    <h2 id="categoryTitle"></h2>
+                                                                    <p id="categoryDescription"></p>
+                                                                    <a id="categoryLink" href="link" target="_blank">Learn more on Wikipedia</a>
+                                                                </div>
+                                                            </div>
+                                                        
+                                                            <!-- Latest News -->
+                                                            <div class="latest-news-widget-area mb-50">
+                                                                <h5>Latest News</h5>
+                                                                <div class="widget-blog-post">
+                                                                    <!-- Single Blog Post -->
+                                                                    <div class="widget-single-blog-post d-flex align-items-center">
+                                                                        <div class="widget-post-thumbnail pr-3">
+                                                                            <img src="img/blog-img/ln1.jpg" alt="Big Discovery for Medicine">
+                                                                        </div>
+                                                                        <div class="widget-post-content">
+                                                                            <a href="#" class="news-title" onclick="openNewsModal('news1')">A big discovery for medicine</a>
+                                                                            <p class="news-date">Dec 15, 2024</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Single Blog Post -->
+                                                                    <div class="widget-single-blog-post d-flex align-items-center">
+                                                                        <div class="widget-post-thumbnail pr-3">
+                                                                            <img src="img/blog-img/ln2.jpg" alt="Dentistry for Everybody">
+                                                                        </div>
+                                                                        <div class="widget-post-content">
+                                                                            <a href="#" class="news-title" onclick="openNewsModal('news2')">Dentistry for everybody</a>
+                                                                            <p class="news-date">Dec 15, 2024</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Single Blog Post -->
+                                                                    <div class="widget-single-blog-post d-flex align-items-center">
+                                                                        <div class="widget-post-thumbnail pr-3">
+                                                                            <img src="img/blog-img/ln3.jpg" alt="When it’s time to take pills">
+                                                                        </div>
+                                                                        <div class="widget-post-content">
+                                                                            <a href="#" class="news-title" onclick="openNewsModal('news3')">When it’s time to take pills</a>
+                                                                            <p class="news-date">Dec 15, 2024</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        
+                                                            <!-- Modal for News -->
+                                                            <div id="newsModal" class="category-modal">
+                                                                <div class="category-modal-content">
+                                                                    <span class="close-btn" onclick="closeNewsModal()">&times;</span>
+                                                                    <h2 id="modalTitle"></h2>
+                                                                    <p id="modalDescription"></p>
+                                                                </div>
+                                                            </div>
+                                                        
+                                                            <script>
+                                // Category Data
+                                const categoryInfoData = {
+                                    radiology: {
+                                        title: "Radiology",
+                                        description: "Radiology is the medical discipline that uses imaging to diagnose and treat diseases within the body.",
+                                        link: "https://en.wikipedia.org/wiki/Radiology"
+                                    },
+                                    cardiology: {
+                                        title: "Cardiology",
+                                        description: "Cardiology is the branch of medicine that deals with diseases and abnormalities of the heart.",
+                                        link: "https://en.wikipedia.org/wiki/Cardiology"
+                                    },
+                                    gastroenterology: {
+                                        title: "Gastroenterology",
+                                        description: "Gastroenterology is the branch of medicine focused on the digestive system and its disorders.",
+                                        link: "https://en.wikipedia.org/wiki/Gastroenterology"
+                                    },
+                                    neurology: {
+                                        title: "Neurology",
+                                        description: "Neurology is a branch of medicine dealing with disorders of the nervous system.",
+                                        link: "https://en.wikipedia.org/wiki/Neurology"
+                                    },
+                                    surgery: {
+                                        title: "General Surgery",
+                                        description: "General surgery is a surgical specialty that focuses on the abdominal organs and other related areas.",
+                                        link: "https://en.wikipedia.org/wiki/General_surgery"
+                                    }
+                                };
+                        
+                                // Open Category Modal
+                                function showCategoryInfo(categoryKey) {
+                                    const category = categoryInfoData[categoryKey];
+                                    if (category) {
+                                        document.getElementById("categoryTitle").innerText = category.title;
+                                        document.getElementById("categoryDescription").innerText = category.description;
+                                        document.getElementById("categoryLink").href = category.link;
+                                        document.getElementById("categoryModal").style.display = "block";
+                                    }
+                                }
+                        
+                                // Open News Modal
+                                const newsData = {
+                                    news1: {
+                                        title: "A big discovery for medicine",
+                                        description: "This article discusses a major breakthrough in medical science, highlighting new techniques and innovations in treatment."
+                                    },
+                                    news2: {
+                                        title: "Dentistry for everybody",
+                                        description: "An exploration of how modern dentistry is evolving to make dental care more accessible and affordable."
+                                    },
+                                    news3: {
+                                        title: "When it’s time to take pills",
+                                        description: "A look into the growing awareness of medication adherence and how taking pills on time is essential for health."
+                                    }
+                                };
+                        
+                                function openNewsModal(newsId) {
+                                    const news = newsData[newsId];
+                                    document.getElementById("modalTitle").innerText = news.title;
+                                    document.getElementById("modalDescription").innerText = news.description;
+                                    document.getElementById("newsModal").style.display = "block";
+                                }
+                        
+                                // Close the category modal
+                                function closeCategoryModal() {
+                                    document.getElementById("categoryModal").style.display = "none";
+                                }
+                        
+                                // Close the news modal
+                                function closeNewsModal() {
+                                    document.getElementById("newsModal").style.display = "none";
+                                }
+                        
+                                // Close the modal if clicked outside of it
+                                window.onclick = function(event) {
+                                    if (event.target == document.getElementById("categoryModal")) {
+                                        closeCategoryModal();
+                                    }
+                                    if (event.target == document.getElementById("newsModal")) {
+                                        closeNewsModal();
+                                    }
+                                };
+                            </script>
+                        </body>
+                        
+                                                    
                         <!-- medilife Emergency Card -->
                         <div class="medilife-emergency-card bg-img bg-overlay" style="background-image: url(img/bg-img/about1.jpg);">
                             <a href=tel:53345795332453> <i class="icon-smartphone"> </i> </a>
@@ -816,7 +1294,7 @@
                                         <img src="img/blog-img/ln1.jpg" alt="">
                                     </div>
                                     <div class="widget-post-content">
-                                        <a href="#">Better Health Care</a>
+                                        <a href="blog.html">Better Health Care</a>
                                         <p>Dec 02, 2017</p>
                                     </div>
                                 </div>
@@ -826,7 +1304,7 @@
                                         <img src="img/blog-img/ln2.jpg" alt="">
                                     </div>
                                     <div class="widget-post-content">
-                                        <a href="#">A new drug is tested</a>
+                                        <a href="blog.html">A new drug is tested</a>
                                         <p>Dec 02, 2017</p>
                                     </div>
                                 </div>
@@ -836,7 +1314,7 @@
                                         <img src="img/blog-img/ln3.jpg" alt="">
                                     </div>
                                     <div class="widget-post-content">
-                                        <a href="#">Health department advice</a>
+                                        <a href="blog.html">Health department advice</a>
                                         <p>Dec 02, 2017</p>
                                     </div>
                                 </div>
@@ -887,7 +1365,7 @@
                             <!-- Copywrite Text -->
                             <div class="copywrite-text">
                                 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://google.com" target="_blank">GropZ</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://google.com" target="_blank">GroupZ</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 </p>
 <p>Re-distributed by <a href="https://google.com/" target="_blank">GroupZ</a>
@@ -905,12 +1383,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
     <script src="js/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="js/bootstrap.min.js"></script>
     <!-- Plugins js -->
     <script src="js/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
 </body>
 

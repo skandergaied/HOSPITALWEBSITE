@@ -16,7 +16,8 @@
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="style.css">
-     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
 
@@ -27,157 +28,202 @@
     </div>
 
     <!-- ***** Header Area Start ***** -->
-    <head>
-        <div class="new">
-            <a class="navbar-brand" href="index.html">
-                <img src="img/core-img/logo.png" alt="Logo">
-            </a>
-            <ul class="navbar1">
-                <li><a href="index.html">HOME</a></li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" href="#" role="button">
-                        Pages
-                    </a> 
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="index.html">Home</a>
-                        <a class="dropdown-item" href="about-us.html">About Us</a>
-                        <a class="dropdown-item" href="services.html">Services</a>
-                        <a class="dropdown-item" href="blog.html">News</a>
-                        <a class="dropdown-item" href="single-blog.html">News Details</a>
-                        <a class="dropdown-item" href="contact.html">Contact</a>
-                        <a class="dropdown-item" href="elements.html">Elements</a>
-                        <a class="dropdown-item" href="index-icons.html">All Icons</a>
+    <div class="new">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <!-- Brand/Logo -->
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/core-img/logo.png" alt="Logo">
+                </a>
+                <!-- Mobile menu toggle button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" 
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" 
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Offcanvas menu container -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" 
+                     aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" 
+                                aria-label="Close"></button>
                     </div>
-                </li>
-                <li><a href="about-us.html">ABOUT US</a></li>
-                <li><a href="services.html">SERVICES</a></li>
-                <li><a href="blog.html">NEWS</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-                <li><a href="hh.html" class="appointment-btn">Appointment</a></li>
-            </ul>
-        </div>
-     </head>
+                    <div class="offcanvas-body">
+                        <!-- Navigation links -->
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                            </li>
+                           
+                            <!-- Dropdown menu -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" 
+                                   data-bs-toggle="dropdown" aria-expanded="false">
+                                    Pages
+                                </a>
+                                <ul class="dropdown-menu">
+                                    
+                                    <li><a href="index.html" class="dropdown-item">Home</a></li>
+                                  <li><a href="about-us.html" class="dropdown-item">About Us</a></li>
+                                 <li><a href="services.html" class="dropdown-item">Services</a></li>
+                                  <li><a href="blog.html" class="dropdown-item">News</a></li>
+                                 <li><a href="contact.html" class="dropdown-item">Contact</a></li>
+                                </ul>
+                            </li>
+
+                            
+
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="about-us.html">About Us </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="services.html">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                            <!-- Appointment button -->
+                            <li class="nav-item">
+                                <a class="nav-link appointment-btn" href="appointment.html" >Make Appointment</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+        
+        
     <!-- ***** Header Area End ***** -->
 
     <!-- ***** Breadcumb Area Start ***** -->
-    <section class="breadcumb-area bg-img gradient-background-overlay" style="background-image: url(img/bg-img/breadcumb3.jpg);">
+    <section class="breadcumb-area bg-img gradient-background-overlay" >
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
                     <div class="breadcumb-content">
                         <h3 class="breadcumb-title">Contact</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetuer</p>
+                        <p>If you have any questions or need further assistance, please feel free to reach out to us. We’re here to help!</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- ***** Breadcumb Area End ***** -->
-
     <section class="medilife-contact-area section-padding-100">
         <div class="container">
             <div class="row">
-            </head>
-            <body>
-                <div class="container">
-                    <div class="row">
-                        <!-- Contact Form Area -->
-                        <div class="container">
-                            <div class="row">
-                                <!-- Contact Form Area -->
-                                <div class="col-12 col-lg-8">
-                                    <div class="contact-form">
-                                        <h5 class="mb-50">Get in Touch</h5>
-                                        <p class="mb-50">Fill up the form to get in touch with us. </p>
-                        
-                                        <form action="#" method="post">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" id="contact-name" placeholder="Name">
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="email" class="form-control" id="contact-email" placeholder="Email">
-                                            </div>
-                                            <div class="form-group">
-                                                <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-                                            </div>
-                                            <button type="submit" class="btn medilife-btn">Send Message <span>+</span></button>
-                                        </form>
-                        
-                                        <!-- alert box -->
-                                        <div id="customAlert" style="display:none; background-color: #f1f1f1; padding: 20px; margin-top: 20px; text-align: center;">
-                                            <p>Success!</p>
-                                            <button id="closeAlert">OK</button>
-                                        </div>
-                        
-                                        <script>
-                                            document.addEventListener("DOMContentLoaded", function () {
-                                                const button = document.querySelector(".btn.medilife-btn");
-                                                const alertBox = document.getElementById("customAlert");
-                                                const closeButton = document.getElementById("closeAlert");
-                        
-                                                // click button
-                                                button.addEventListener("click", function (event) {
-                                                    event.preventDefault(); // Varsayılan işlemi engelle
-                                                    alertBox.style.display = "block"; // Alert kutusunu göster
-                                                });
-                        
-                                                // close Alert
-                                                closeButton.addEventListener("click", function () {
-                                                    alertBox.style.display = "none"; // Alert kutusunu gizle
-                                                });
-                                            });
-                                        </script>
-                                    </div>
+                <div class="col-12 col-lg-8">
+                    <div class="contact-form">
+                        <h5 class="mb-50">Get in Touch</h5>
+                        <p class="mb-50">Fill up the form to get in touch with us. </p>
+        
+                        <form id="contactForm" action="#" method="post">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="contact-name" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="contact-email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                            </div>
+                            <button type="submit" class="btn medilife-btn">Send Message <span>+</span></button>
+                        </form>
+                        <!-- alert box -->
+                        <div id="customAlert" style="display:none; background-color: #f1f1f1; padding: 20px; margin-top: 20px; text-align: center;">
+                            <p>Success!</p>
+                            <button id="closeAlert">OK</button>
+                        </div>
+        
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function () {
+                                const form = document.getElementById("contactForm");
+                                const button = document.querySelector(".btn.medilife-btn");
+                                const alertBox = document.getElementById("customAlert");
+                                const closeButton = document.getElementById("closeAlert");
+        
+                                // click button
+                                form.addEventListener("submit", function (event) {
+                                    event.preventDefault(); // PREVENT
+                                    
+                                    const name = document.getElementById("contact-name").value;
+                                    const email = document.getElementById("contact-email").value;
+                                    const message = document.getElementById("message").value;
+        
+                                    if (name && email && message) {
+                                        alertBox.style.display = "block"; 
+                                    } else {
+                                        alert("Please fill in all fields."); 
+                                    }
+                                });
+        
+                                // close Alert
+                                closeButton.addEventListener("click", function () {
+                                    alertBox.style.display = "none"; 
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+    
+                <!-- Sidebar Area -->
+                <div class="col-12 col-lg-4">
+                    <div class="content-sidebar">
+                        <div class="medilife-contact-card mb-50">
+                            <div class="single-contact d-flex align-items-center">
+                                <div class="contact-icon mr-30">
+                                    <i class="icon-doctor"></i>
                                 </div>
+                                <div class="contact-meta">
+                                    <p>Address:</p>
+                                    <a href="https://www.google.com/maps/place/%C3%96zel+Termessos+Hastanesi/@37.0351908,30.6035234,17z/data=!3m1!4b1!4m6!3m5!1s0x14c38bcc8f43f8e3:0x79a1b81e195cc224!8m2!3d37.0351908!4d30.6035234!16s%2Fg%2F11fxb85zjs?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D">
+                                        <p>Yeniköy, 106. Sk. No:11, 07190 Döşemealtı/Antalya </p>
+                                    </a>
+                                </div>
+                            </div>
+        
+                            <div class="single-contact d-flex align-items-center">
+                                <div class="contact-icon mr-30">
+                                    <i class="icon-doctor"></i>
+                                </div>
+                                <div class="contact-meta">
+                                    <p>Phone:</p>
+                                    <a href="tel:53345795332453" class="contact-link">+53 345 7953 32453</a>
+                                </div>
+                            </div>
+        
+                            <div class="single-contact d-flex align-items-center">
+                                <div class="contact-icon mr-30">
+                                    <i class="icon-doctor"></i>
+                                </div>
+                                <div class="contact-meta">
+                                    <p>Email:</p><a href="mailto:medilife@antalya.tr" class="contact-link">medilife@antalya.tr</a>
+                                </div>
+                            </div>
                         
-                                <!-- Sidebar Area -->
-                                <div class="col-12 col-lg-4">
-                                    <div class="content-sidebar">
-                                        <div class="medilife-contact-card mb-50">
-                                            <div class="single-contact d-flex align-items-center">
-                                                <div class="contact-icon mr-30">
-                                                    <i class="icon-doctor"></i>
-                                                </div>
-                                                <div class="contact-meta">
-                                                    <p>Address:</p>
-                                                    <a href="https://www.google.com/maps/place/%C3%96zel+Termessos+Hastanesi/@37.0351908,30.6035234,17z/data=!3m1!4b1!4m6!3m5!1s0x14c38bcc8f43f8e3:0x79a1b81e195cc224!8m2!3d37.0351908!4d30.6035234!16s%2Fg%2F11fxb85zjs?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D">
-                                                        <p>Yeniköy, 106. Sk. No:11, 07190 Döşemealtı/Antalya </p>
-                                                    </a>
-                                                </div>
-                                            </div>
-                        
-                                            <div class="single-contact d-flex align-items-center">
-                                                <div class="contact-icon mr-30">
-                                                    <i class="icon-doctor"></i>
-                                                </div>
-                                                <div class="contact-meta">
-                                                    <p>Phone:</p>
-                                                    <a href="tel:53345795332453"> +53 345 7953 32453</a>
-                                                </div>
-                                            </div>
-                        
-                                            <div class="single-contact d-flex align-items-center">
-                                                <div class="contact-icon mr-30">
-                                                    <i class="icon-doctor"></i>
-                                                </div>
-                                                <div class="contact-meta">
-                                                    <p>Email:</p><a href="mailto:medilife@antalya.tr">medilife@antalya.tr</a>
-                                                </div>
-                                            </div>
-                                            <script>
-                                                document.addEventListener("DOMContentLoaded", function () {
-                                                    const links = document.querySelectorAll(".medilife-contact-card .contact-meta a");
-                                            
-                                                    links.forEach(function (link) {
-                                                        link.addEventListener("click", function () {
-                                                            // Toggle the 'clicked' class to make the color change permanent
-                                                            link.classList.add("clicked");
-                                                        });
-                                                    });
-                                                });
-                                            </script>
-                                            
-                                            
+                                <style>
+                                    .contact-link.clicked {
+                                        color: #FF5733; /* Renk değişikliği, burayı ihtiyacınıza göre değiştirebilirsiniz */
+                                    }
+                                </style>
+                                
+                                <script>
+                                    document.addEventListener("DOMContentLoaded", function () {
+                                        
+                                        const links = document.querySelectorAll(".contact-link");
+                                
+                                        links.forEach(function (link) {
+                                            link.addEventListener("click", function () {
+                                                link.classList.add("clicked");
+                                            });
+                                        });
+                                    });
+                                </script>
+    
                                             <div class="contact-social-area">
                                                 <a href="https://www.google.com"><i class="fa fa-google-plus"></i></a>
                                                 <a href="https://www.pinterest.com"><i class="fa fa-pinterest"></i></a>
@@ -185,11 +231,13 @@
                                                 <a href="https://www.x.com"><i class="fa fa-twitter"></i></a>
                                             </div>
                                             <br>
+                                        
+
                         <!-- medilife Emergency Card -->
                         <div class="medilife-emergency-card bg-img bg-overlay" style="background-image: url(img/bg-img/about1.jpg);">
-                            <i class="icon-smartphone"></i>
-                            <h2>For Emergency calls</h2>
-                            <h3>+12-823-611-8721</h3>
+                            <a href=tel:53345795332453> <i class="icon-smartphone"> </i> </a>
+                            <a href="tel:53345795332453"> <h2>For Emergency calls</h2></a>
+                            <a href="tel:53345795332453"> <h6> +53345795332453 </h3></a> 
                         </div>
                     </div>
                 </div>
@@ -245,7 +293,7 @@
                                     </div>
                                     <div class="widget-post-content">
                                         <a href="blog.html">Better Health Care</a>
-                                        <p>Dec 02, 2017</p>
+                                        <p>Dec 15, 2024</p>
                                     </div>
                                 </div>
                                 <!-- Single Blog Post -->
@@ -255,7 +303,7 @@
                                     </div>
                                     <div class="widget-post-content">
                                         <a href="blog.html">A new drug is tested</a>
-                                        <p>Dec 02, 2017</p>
+                                        <p>Dec 15, 2024</p>
                                     </div>
                                 </div>
                                 <!-- Single Blog Post -->
@@ -265,12 +313,13 @@
                                     </div>
                                     <div class="widget-post-content">
                                         <a href="blog.html">Health department advice</a>
-                                        <p>Dec 02, 2017</p>
+                                        <p>Dec 15, 2024</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
 
                     <div class="col-12 col-sm-6 col-xl-3">
                         <div class="footer-widget-area">
@@ -314,11 +363,16 @@
                         <div class="bottom-footer-content">
                             <!-- Copywrite Text -->
                             <div class="copywrite-text">
+
                                 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://google.com" target="_blank">GroupZ</a>
+                                <p>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;
+<script>document.write(new Date().getFullYear());</script>      All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 </p>
-<p>Re-distributed by <a href="https://themewagon.com/" target="_blank">Themewagon</a>
+<p>Re-distributed by <a href="https://google.com/" target="_blank">GroupZ</a>
 </p>
                             </div>
                         </div>
@@ -334,7 +388,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- Popper js -->
     <script src="js/popper.min.js"></script>
     <!-- Bootstrap js -->
-    <script src="js/bootstrap.min.js"></script>
     <!-- Plugins js -->
     <script src="js/plugins.js"></script>
     <!-- Active js -->
@@ -342,6 +395,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- Google Maps -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwuyLRa1uKNtbgx6xAJVmWy-zADgegA2s"></script>
     <script src="js/map-active.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     
 </body>
 
