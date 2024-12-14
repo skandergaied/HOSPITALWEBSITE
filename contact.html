@@ -82,6 +82,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="services.html">Services</a>
                             </li>
+                            
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html">Contact</a>
                             </li>
@@ -141,29 +142,19 @@
         
                         <script>
                             document.addEventListener("DOMContentLoaded", function () {
-                                const form = document.getElementById("contactForm");
                                 const button = document.querySelector(".btn.medilife-btn");
                                 const alertBox = document.getElementById("customAlert");
                                 const closeButton = document.getElementById("closeAlert");
         
                                 // click button
-                                form.addEventListener("submit", function (event) {
-                                    event.preventDefault(); // PREVENT
-                                    
-                                    const name = document.getElementById("contact-name").value;
-                                    const email = document.getElementById("contact-email").value;
-                                    const message = document.getElementById("message").value;
-        
-                                    if (name && email && message) {
-                                        alertBox.style.display = "block"; 
-                                    } else {
-                                        alert("Please fill in all fields."); 
-                                    }
+                                button.addEventListener("click", function (event) {
+                                    event.preventDefault(); // Varsayılan işlemi engelle
+                                    alertBox.style.display = "block"; // Alert kutusunu göster
                                 });
         
                                 // close Alert
                                 closeButton.addEventListener("click", function () {
-                                    alertBox.style.display = "none"; 
+                                    alertBox.style.display = "none"; // Alert kutusunu gizle
                                 });
                             });
                         </script>

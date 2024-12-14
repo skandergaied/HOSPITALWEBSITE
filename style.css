@@ -1201,7 +1201,7 @@ textarea {
       .breadcumb-area .breadcumb-title {
         font-size: 30px; } }
   .breadcumb-area::after {
-    background-color: rgb(161 179 204 / 75%);
+    background-color: rgba(163, 173, 178, 0.75);
     content: '';
     top: 0;
     left: 0;
